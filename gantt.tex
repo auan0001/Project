@@ -1,0 +1,36 @@
+\begin{ganttchart}[y unit title=0.4cm,
+  y unit chart=0.5cm,
+  x unit=0.3cm,
+  vgrid,hgrid, 
+  title label anchor/.style={below=-1.6ex},
+  title left shift=.05,
+  title right shift=-.05,
+  title height=1,
+  progress label text={},
+  bar height=0.7,
+  group right shift=0,
+  group top shift=.6,
+  group height=.3]{1}{40}
+
+  %Labels
+  \gantttitle{Project Timeline}{40} \\
+  \gantttitle{Phase 1}{15}
+  \gantttitle{Phase 2}{10}
+  \gantttitle{Final Phase}{15} \\
+  \gantttitle{Week 1}{5} 
+  \gantttitle{Week 2}{5} 
+  \gantttitle{Week 3}{5} 
+  \gantttitle{Week 4}{5} 
+  \gantttitle{Week 5}{5} 
+  \gantttitle{Week 6}{5} 
+  \gantttitle{Week 7}{5} 
+  \gantttitle{Week 8}{5} \\
+
+  %Tasks
+  \ganttbar[progress=0]{Task 1}{1}{5} \\
+  \ganttlinkedbar[progress=0]{Task 2}{6}{15} \\
+  \ganttlinkedbar[progress=0]{Task 3}{16}{25} \\
+  \ganttlinkedbar[progress=0]{Task 4}{26}{35} \\
+  \ganttlinkedbar[progress=0]{Task 5}{36}{40}
+
+\end{ganttchart}

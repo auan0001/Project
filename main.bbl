@@ -1,0 +1,31 @@
+\begin{thebibliography}{}
+
+\bibitem[Bechara and Galv{\~a}o, 1986]{bechara1986use}
+Bechara, J. J.~B. and Galv{\~a}o, R.~D. (1986).
+\newblock The use of interactive computing for vehicle routeing.
+\newblock In {\em Recent Advances in System Modelling and Optimization}, pages
+  22--32. Springer.
+
+\bibitem[Kleinrock, 1975]{kleinrock1975queueing}
+Kleinrock, L. (1975).
+\newblock {\em Queueing systems: theory}.
+\newblock John Wiley.
+
+\bibitem[Maculan et~al., 2003]{maculan2003integer}
+Maculan, N., Plateau, G., and Lisser, A. (2003).
+\newblock Integer linear models with a polynomial number of variables and
+  constraints for some classical combinatorial optimization problems.
+\newblock {\em Pesquisa Operacional}, 23:161--168.
+
+\bibitem[Moretti, 2003]{moretti2003weighted}
+Moretti, A.~C. (2003).
+\newblock A weighted projection centering method.
+\newblock {\em Computational \& Applied Mathematics}, 22:19--36.
+
+\bibitem[Yanasse, 1997]{HoracioYanasse}
+Yanasse, H.~H. (1997).
+\newblock An exact algorithm for the tree case of the minimization of open
+  orders problem.
+\newblock Technical report {LAC}-001/97, INPE.
+
+\end{thebibliography}
