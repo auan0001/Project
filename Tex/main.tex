@@ -24,7 +24,7 @@
 \title{\renewcommand{\baselinestretch}{1.17}\normalsize\bf%
   Project in Embedded Systems 15hp 1TE721\\
   \vspace{2mm}
-  \uppercase{Fermentation temperature monitoring system}\\
+  \uppercase{A fermentation temperature monitoring system}\\
   using Atmel AVR and Raspberry Pi\\
 }
 % -------------------------------------------------------------------
@@ -63,8 +63,28 @@
 
 \section*{Background}%
 \label{sec:background}
+In recent years, the number of microbreweries has skyrocketed. 
+
+For homebrewers trying to mimic the micro and macro scale breweries, there exists miniature versions of industry standards using food grade steel fermentation tanks with inline glycol chilling systems. 
+
+In contrast to said methods, a counter-culture renaissance of uncontrolled brewing often referred to as 
+\textit{farmhouse brewing} by letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) ferment without controlled setting, other than moving the vessel to a suitable space. In order to achieve reproducible results without directly controlling the environment. The concern is mostly not letting the temperature reach certain extremes, high or low. Since there are no control parameters, it is of interest to log things such as the internal and ambient temperature in order to investigate what type of beer styles are good to brew during each season of the year. This is also a question of money since a mixed fermentation beer is sometimes barrel aged for up to three years.
+\section*{Objectives}%
+\label{sec:objectives}
+The objective of this project is develop a small and portable system that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before transmitting to the server.
+
+The RPi based server should let the user navigate through a front end menu.
 \section*{Preliminary tasks}%
 \label{sec:preliminary_tasks}
+\begin{enumerate}
+  \item
+Setup project repository, as well as report and documentation workflow. Formulate preliminary time plan and goals. Look for suitable hardware.
+  \item
+Get started with the \AVR toolchain, write makefiles and configure a development environment.
+  \item
+  \item
+  \item Present the project, i.e all project phases, and finalize the report
+\end{enumerate}
 \section*{Grading criteria and grade to be achieved\protect\footnote{Suggestions. To be discussed.}}%
 \label{sec:grading_criteria_and_grading_goal}
 \subsection*{Grade 3}%
@@ -80,12 +100,6 @@ In addition to the stated grading criteria, the data is accessed in a manner sim
 Grade to be achieved: 5
 \section*{Preliminary time schedule}%
 \label{sec:preliminary_time_schedule}
-\subsection*{Task 1}%
-\label{sub:task_1}
-Setup project repository, as well as report and documentation workflow. Formulate preliminary time plan and goals. Look for suitable hardware.
-\subsection*{Task 2}%
-\label{sub:task_2}
-Get started with the \AVR toolchain, write makefiles and configure .
 
 
 \begin{figure}[ht]
