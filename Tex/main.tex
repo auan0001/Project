@@ -63,41 +63,46 @@
 
 \section*{Background}%
 \label{sec:background}
-In recent years, the number of microbreweries has skyrocketed. 
+In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry.
 
-For homebrewers trying to mimic the micro and macro scale breweries, there exists miniature versions of industry standards using food grade steel fermentation tanks with inline glycol chilling systems. 
+For homebrewers  food grade steel fermentation tanks with inline glycol chilling systems. 
 
 In contrast to said methods, a counter-culture renaissance of uncontrolled brewing often referred to as 
 \textit{farmhouse brewing} by letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) ferment without controlled setting, other than moving the vessel to a suitable space. In order to achieve reproducible results without directly controlling the environment. The concern is mostly not letting the temperature reach certain extremes, high or low. Since there are no control parameters, it is of interest to log things such as the internal and ambient temperature in order to investigate what type of beer styles are good to brew during each season of the year. This is also a question of money since a mixed fermentation beer is sometimes barrel aged for up to three years.
+
 \section*{Objectives}%
 \label{sec:objectives}
-The objective of this project is develop a small and portable system that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before transmitting to the server.
+The objective of this project is develop a small and portable system prototype that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before transmitting to the server.
 
-The RPi based server should let the user navigate through a front end menu.
+The RPi based server is accessed on the internet by the end user and can be visualized using external libraries that works on both computers and mobile units.
+\newpage
 \section*{Preliminary tasks}%
 \label{sec:preliminary_tasks}
+The time planning for the enumerated tasks is visualized as a Gantt scheme in Figure \ref{fig:gantt}.
 \begin{enumerate}
   \item
 Setup project repository, as well as report and documentation workflow. Formulate preliminary time plan and goals. Look for suitable hardware.
   \item
-Get started with the \AVR toolchain, write makefiles and configure a development environment.
+Get started with the \AVR toolchain, write Makefiles and configure a development environment. Configure ARM compatible Linux on the RPi. Write UART routines and verify that the communication is working. Extend the communication to contain temperature data from the sensor.
   \item
+    Apply a filter to the signal. Design the website, configure databases and visualization of data.
   \item
+    Extend the website with more features. Collect or generate dummy-data in order to present a proof of concept.
   \item Present the project, i.e all project phases, and finalize the report
 \end{enumerate}
 \section*{Grading criteria and grade to be achieved\protect\footnote{Suggestions. To be discussed.}}%
 \label{sec:grading_criteria_and_grading_goal}
-\subsection*{Grade 3}%
-\label{sub:grade_3}
-The temperature is measured by the microcontroller and presented through a visualization on a website that is accessible from the internet. The website is hosted on a Raspberry Pi computer configured with an appropriate ARM compatible Linux distribution.
-\subsection*{Grade 4}%
-\label{sub:grade_4}
-The thermostat signal is processed through a Kalman filter or similar. After the initial fermentation, the ambient conditions governs the temperature of the beer. The code is portable and it is possible to extend the system with temperature control in a fermentation chamber.
-\subsection*{Grade 5}%
-\label{sub:grade_5}
-In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application.
+\begin{itemize}
+  \item 
+    Grade 3. The temperature is measured by the microcontroller and presented through a visualization on a website that is accessible from the internet. The website is hosted on a Raspberry Pi computer configured with an appropriate ARM compatible Linux distribution.
+  \item 
+   Grade 4. The thermostat signal is processed through a Kalman filter or similar. After the initial fermentation, the ambient conditions governs the temperature of the beer. The code is portable and it is possible to extend the system with temperature control in a fermentation chamber.
+  \item
+   Grade 5. In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application.
+\end{itemize}
 
 Grade to be achieved: 5
+\newpage
 \section*{Preliminary time schedule}%
 \label{sec:preliminary_time_schedule}
 
@@ -106,6 +111,6 @@ Grade to be achieved: 5
   \centering
   \input{gantt.tex}
   \caption{Gantt scheme representing the project timeline.}
-  \label{fig:}
+  \label{fig:gantt}
 \end{figure}
 \end{document}
