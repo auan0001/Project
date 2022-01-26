@@ -1,11 +1,12 @@
-#include <avr/io.h>
-#include <util/delay.h>
-#include <avr/interrupt.h>
-
 #define F_CPU 16000000UL
 #define __AVR_ATmega328p__
 #define BAUD 9600
 #define BRC ((F_CPU/16/BAUD)-1)
+
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+
 #define TX_BUF_SZ 128
 char serialBuf[TX_BUF_SZ];
 uint8_t serialReadPos = 0;

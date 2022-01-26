@@ -25,7 +25,7 @@
   Project in Embedded Systems 15hp 1TE721\\
   \vspace{2mm}
   \uppercase{A fermentation temperature monitoring system}\\
-  using Atmel AVR and Raspberry Pi\\
+  using Atmel AVR and ARM single-board computer\\
 }
 % -------------------------------------------------------------------
 \author{%
@@ -63,12 +63,11 @@
 
 \section*{Background}%
 \label{sec:background}
-In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry.
+In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry. These systems are often equipped with sensors logging temperature and pressure.
 
-For homebrewers  food grade steel fermentation tanks with inline glycol chilling systems. 
+A traditional brewing style, often referred to as 
+\textit{farmhouse brewing}, focuses on letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) free-rise in temperature, hence not using any control systems. Since the compounds produced by these microorganisms are in most cases unwanted, a lot of research has been put into detecting an excluding them from the process as part of quality control. An important step in getting to know more of the brewer's house culture is logging the fermentation temperature, which in some cases can be as long as three years.
 
-In contrast to said methods, a counter-culture renaissance of uncontrolled brewing often referred to as 
-\textit{farmhouse brewing} by letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) ferment without controlled setting, other than moving the vessel to a suitable space. In order to achieve reproducible results without directly controlling the environment. The concern is mostly not letting the temperature reach certain extremes, high or low. Since there are no control parameters, it is of interest to log things such as the internal and ambient temperature in order to investigate what type of beer styles are good to brew during each season of the year. This is also a question of money since a mixed fermentation beer is sometimes barrel aged for up to three years.
 
 \section*{Objectives}%
 \label{sec:objectives}
@@ -101,7 +100,6 @@ Get started with the \AVR toolchain, write Makefiles and configure a development
    Grade 5. In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application.
 \end{itemize}
 
-Grade to be achieved: 5
 \newpage
 \section*{Preliminary time schedule}%
 \label{sec:preliminary_time_schedule}
