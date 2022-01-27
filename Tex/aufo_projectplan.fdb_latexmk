@@ -1,11 +1,10 @@
 # Fdb version 3
-["biber main"] 1643299095 "main.bcf" "main.bbl" "main" 1643299100
-  "/home/auan/bibliography.bib" 1643298698 1721 57644d9d7c52d7252ca47fda3bc7fd4a ""
-  "main.bcf" 1643299099 106294 318858e9ac8253dfb7ace4de6c4a357d "pdflatex"
+["biber aufo_projectplan"] 1643316557 "aufo_projectplan.bcf" "aufo_projectplan.bbl" "aufo_projectplan" 1643316561
+  "aufo_projectplan.bcf" 1643316561 105760 fe32823fc23e6a1a3f5d9c4432bbaeed "pdflatex"
   (generated)
-  "main.bbl"
-  "main.blg"
-["pdflatex"] 1643299098 "main.tex" "main.pdf" "main" 1643299100
+  "aufo_projectplan.bbl"
+  "aufo_projectplan.blg"
+["pdflatex"] 1643316560 "aufo_projectplan.tex" "aufo_projectplan.pdf" "aufo_projectplan" 1643316561
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1640600964 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640600964 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -198,14 +197,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1641317686 4243317 6cd4c1d3b72728bfa7db8ef2e14c0430 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1641317676 2920110 44b5ecaf1870c9779885f0cdbb7a93b1 ""
+  "aufo_projectplan.aux" 1643316561 1135 9848f91c7c7ca0df2404706770052fe4 "pdflatex"
+  "aufo_projectplan.bbl" 1643316558 0 d41d8cd98f00b204e9800998ecf8427e "biber aufo_projectplan"
+  "aufo_projectplan.run.xml" 1643316561 2439 61733422f18ce5bddf41db4282a4029e "pdflatex"
+  "aufo_projectplan.tex" 1643316394 5911 f85a66200cd4bc09692dba5fdab8a3cf ""
   "gantt.tex" 1642597547 929 bbe918c6180bd379b5a1eb0b3a2ca4a4 ""
-  "main.aux" 1643299099 1388 5bf62b99157f00c2644b440189ff7aed "pdflatex"
-  "main.bbl" 1643299096 3207 1fa08f0909c37006c17e0df726ba31ed "biber main"
-  "main.run.xml" 1643299099 2440 38cdc1b4b5107abc7f8e9ec91b4415fc "pdflatex"
-  "main.tex" 1643299092 5827 33d8891f607a8bcf64d14e32eceb3d61 ""
   (generated)
-  "main.aux"
-  "main.bcf"
-  "main.log"
-  "main.pdf"
-  "main.run.xml"
+  "aufo_projectplan.aux"
+  "aufo_projectplan.bcf"
+  "aufo_projectplan.log"
+  "aufo_projectplan.pdf"
+  "aufo_projectplan.run.xml"

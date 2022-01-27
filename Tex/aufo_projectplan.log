@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  27 JAN 2022 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  27 JAN 2022 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**aufo_projectplan.tex
+(./aufo_projectplan.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -841,8 +841,8 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count485
 \l__pdf_internal_box=\box115
-) (./main.aux)
-\openout1 = `main.aux'.
+) (./aufo_projectplan.aux)
+\openout1 = `aufo_projectplan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -933,11 +933,11 @@ Package: xparse 2021-11-12 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout4 = `main.bcf'.
+\openout4 = `aufo_projectplan.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+Package biblatex Info: ... file 'aufo_projectplan.bbl' found.
+ (./aufo_projectplan.bbl)
 Package biblatex Info: Reference section=0 on input line 47.
 Package biblatex Info: Reference segment=0 on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
@@ -953,21 +953,21 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./gantt.tex) [3] (./main.aux)
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./gantt.tex) [3] (./aufo_projectplan.aux)
+Package logreq Info: Writing requests to 'aufo_projectplan.run.xml'.
+\openout1 = `aufo_projectplan.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27623 strings out of 478353
- 554044 string characters out of 5854636
- 1266580 words of memory out of 5000000
- 45310 multiletter control sequences out of 15000+600000
+ 27416 strings out of 478353
+ 549908 string characters out of 5854636
+ 1266129 words of memory out of 5000000
+ 45103 multiletter control sequences out of 15000+600000
  419922 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,9n,118p,1317b,1656s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,9n,118p,1141b,1656s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (3 pages, 172366 bytes).
+Output written on aufo_projectplan.pdf (3 pages, 165410 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

@@ -15,7 +15,7 @@
     doi=true,
     eprint=false
 ]{biblatex}
-\addbibresource{~/bibliography.bib}
+%\addbibresource{~/bibliography.bib}
 \usepackage{xspace}
 \usepackage{csquotes}
 \usepackage{graphicx}
@@ -52,39 +52,21 @@
 
 \vspace{-0.5cm}
 
-%-------------------------------------------------------------------
-%Abstract
-%\bigskip
-%\noindent
-%{\small{\bf ABSTRACT.}
-%Abstract should concisely
-%summarize the key findings of the paper. It should consist 
-%of a single paragraph containing no more than 150 words. 
-%The Abstract does not have a section* number.
-%}
-
-%\medskip
-%\noindent
-%{\small{\bf Keywords}{:} 
-%After the abstract three keywords must be provided.
-%}
-
 \baselineskip=\normalbaselineskip
 % -------------------------------------------------------------------
 
 \section*{Background}%
 \label{sec:background}
-In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry. These systems are often equipped with sensors logging temperature and pressure.
+In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry. These systems are often equipped with sensors logging temperature and pressure. For the most common commercial beers, such as lagers, there exists optimized means of production where the temperature controls plays a big part in order to maximize yield and minimize the length of the production cycle.
 
 A traditional brewing style, often referred to as 
-\textit{farmhouse brewing}, focuses on letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) free-rise in temperature, hence not using any control systems. Since the compounds produced by these microorganisms are in most cases unwanted, a lot of research has been put into detecting an excluding them from the process as part of quality control. An important step in getting to know more of the brewer's house culture is logging the fermentation temperature, which in some cases can be as long as three years.
-
+\textit{farmhouse brewing}, focuses on letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) free-rise in temperature, hence not using any control systems. One historically popular option is letting it ferment in a cellar due to it's stable climate. Since the compounds produced by these microorganisms are in most cases unwanted, a lot of research has been put into detecting an excluding them from the process as part of quality control. Only a small share of the research have had the focus on producing beer using these microorganisms which makes it interesting to log the temperature dynamics of a mixed fermentation as a pre-study in order to learn how the fermentation can be controlled to get satisfactory results.
 
 \section*{Objectives}%
 \label{sec:objectives}
-The objective of this project is develop a small and portable system prototype that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before transmitting to the server.
+The objective of this project is develop a small and portable system prototype that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before being transmitted to the server in a time series database.
 
-The RPi based server is accessed on the internet by the end user and can be visualized using external libraries that works on both computers and mobile units.
+The RPi based server is accessed on the internet by the end user and can be visualized using external libraries compatible with the choice of database.
 \newpage
 \section*{Preliminary tasks}%
 \label{sec:preliminary_tasks}
@@ -110,11 +92,11 @@ Get started with the \AVR toolchain, write Makefiles and configure a development
   \item
    Grade 5. In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application.
 \end{itemize}
+The goal for the project is to achieve the grade 5.
 %\cite{trevennorPracticalAVRMicrocontrollers2012}
 \newpage
 \section*{Preliminary time schedule}%
 \label{sec:preliminary_time_schedule}
-
 
 \begin{figure}[ht]
   \centering
@@ -122,5 +104,5 @@ Get started with the \AVR toolchain, write Makefiles and configure a development
   \caption{Gantt scheme representing the project timeline.}
   \label{fig:gantt}
 \end{figure}
-\printbibliography
+%\printbibliography
 \end{document}
