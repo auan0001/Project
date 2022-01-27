@@ -34,12 +34,11 @@ CLOSED: [2022-01-26 Wed 15:57] DEADLINE: <2022-01-26 Wed>
 DEADLINE: <2022-02-04 Fri>
  :TAGS: :@project:
 
-** TODO IEEE Bibtex
-DEADLINE: <2022-02-09 Wed>
- :TAGS: :@project:
-
-** TODO Hand in project plan
-DEADLINE: <2022-01-27 Thu 23:59>
+** DONE IEEE Bibtex
+CLOSED: [2022-01-27 Thu 17:00] DEADLINE: <2022-02-09 Wed>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-01-27 Thu 17:00]
+:END:
  :TAGS: :@project:
 
 * Meetings

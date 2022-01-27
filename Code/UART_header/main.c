@@ -1,23 +1,21 @@
-#include <stdint.h>
-#include <avr/io.h>
+#include </usr/avr/include/avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include "uart.h"
 
+#define CHARRSZ 8
+
 void main(void)
 {
-  uint8_t data = 'A';
-
+  const uint16_t len = CHARRSZ;
+  uint8_t carr[CHARRSZ] = "ABBE63\n";
   uart_init();
   sei();
 
-  while(1)
+  for(;;)
   {
-    uart_send_byte(data);
-    _delay_ms(500);
-    data++;
-    if (data > 'Z') {
-      data = 'A';
-    }
+    uart_send_arr(carr, len);
+    /*uart_send_byte('3');*/
+    _delay_ms(2500);
   }
 }
