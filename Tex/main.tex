@@ -6,7 +6,18 @@
 \usepackage[margin=5cm]{geometry}
 % -------------------------------------------------------------------
 \usepackage{pgfgantt}
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sortlocale=se_EN,
+    natbib=true,
+    url=false, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{~/bibliography.bib}
 \usepackage{xspace}
+\usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{rotating}
 \usepackage{amsmath,amssymb}
@@ -99,7 +110,7 @@ Get started with the \AVR toolchain, write Makefiles and configure a development
   \item
    Grade 5. In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application.
 \end{itemize}
-
+%\cite{trevennorPracticalAVRMicrocontrollers2012}
 \newpage
 \section*{Preliminary time schedule}%
 \label{sec:preliminary_time_schedule}
@@ -111,4 +122,5 @@ Get started with the \AVR toolchain, write Makefiles and configure a development
   \caption{Gantt scheme representing the project timeline.}
   \label{fig:gantt}
 \end{figure}
+\printbibliography
 \end{document}
