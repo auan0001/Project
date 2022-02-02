@@ -1,0 +1,10 @@
+clang
+-target
+avr
+-mmcu=atmega328p
+-nostdinc
+-ffreestanding
+-isystem/usr/avr/include
+-I./include
+%h -x
+%h c-header
