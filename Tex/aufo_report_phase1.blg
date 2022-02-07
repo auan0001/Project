@@ -1,0 +1,5 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[1] Config.pm:314> INFO - Logfile is 'aufo_report_phase1.blg'
+[104] biber:340> INFO - === Mon Feb  7, 2022, 20:48:54
+[127] Biber.pm:415> INFO - Reading 'aufo_report_phase1.bcf'
+[218] Utils.pm:395> WARN - No data sources defined!

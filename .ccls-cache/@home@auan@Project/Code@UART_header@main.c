@@ -14,8 +14,11 @@ void main(void)
 
   for(;;)
   {
-    uart_send_arr(carr, len);
-    /*uart_send_byte('3');*/
-    _delay_ms(2500);
+    if (uart_read_count() > 0) {
+      if (uart_read() == 'A') {
+        _delay_ms(200);
+        uart_send_arr(carr, len);
+      }
+    }
   }
 }

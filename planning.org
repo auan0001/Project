@@ -33,8 +33,11 @@ CLOSED: [2022-01-26 Wed 15:57] DEADLINE: <2022-01-26 Wed>
 :END:
  :TAGS: :@avr:
 
-** TODO Prepare S2
-DEADLINE: <2022-02-04 Fri>
+** DONE Prepare S2 material
+CLOSED: [2022-02-03 Thu 22:21] DEADLINE: <2022-02-03 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-03 Thu 22:21]
+:END:
  :TAGS: :@project:
 
 ** DONE IEEE Bibtex
@@ -43,6 +46,39 @@ CLOSED: [2022-01-27 Thu 17:00] DEADLINE: <2022-02-09 Wed>
 - State "DONE"       from "TODO"       [2022-01-27 Thu 17:00]
 :END:
  :TAGS: :@project:
+
+** DONE DS18B20 interface w UART comm
+CLOSED: [2022-02-02 Wed 22:28] DEADLINE: <2022-02-02 Wed>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-02 Wed 22:28]
+:END:
+ :TAGS: :@avr:
+
+** DONE RPi serial comm with AVR (real data)
+CLOSED: [2022-02-03 Thu 16:12] DEADLINE: <2022-02-03 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-03 Thu 16:12]
+:END:
+ :TAGS: :@avr: :@rpi:
+
+** TODO P1 report
+DEADLINE: <2022-02-06 Sun 23:59>
+ :TAGS: :@project:
+
+** DONE UART Rx
+CLOSED: [2022-02-03 Thu 22:22] DEADLINE: <2022-02-03 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-03 Thu 22:22]
+:END:
+ :TAGS: :@avr:
+
+** TODO Read temp instruction from UART
+DEADLINE: <2022-02-03 Thu>
+ :TAGS: :@avr: :@rpi:
+
+** TODO Shrink onewire.h (omit parasite etc)
+DEADLINE: <2022-02-03 Thu>
+ :TAGS: :@avr:
 
 * Meetings
 
@@ -54,9 +90,12 @@ CLOSED: [2022-01-30 Sun 19:33] SCHEDULED: <2022-01-28 Fri 15:40-16:05>
 :END:
  :TAGS: :@project:
 
-** MEETING Present S2 Phase 1
-SCHEDULED: <2022-02-04 Fri 09:00-10:20>
+** DONE Present S2 Phase 1
+CLOSED: [2022-02-04 Fri 17:19] SCHEDULED: <2022-02-04 Fri 09:00-10:20>
  :PROPERTIES:
  :TAGS: :@project:
  :LOCATION: Zoom
  :END:
+:LOGBOOK:
+- State "DONE"       from "MEETING"    [2022-02-04 Fri 17:19]
+:END:

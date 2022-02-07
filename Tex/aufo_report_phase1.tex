@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+% -------------------------------------------------------------------
+\usepackage[utf8]{inputenc}				
+\usepackage[T1]{fontenc}					
+\usepackage[english]{babel}
+\usepackage[margin=5cm]{geometry}
+% -------------------------------------------------------------------
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sortlocale=se_EN,
+    natbib=true,
+    url=false, 
+    doi=true,
+    eprint=false
+]{biblatex}
+%\addbibresource{~/bibliography.bib}
+\usepackage{xspace}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{subfig,epsfig,tikz,float}		            % Packages de figuras. 
+% -------------------------------------------------------------------
+\usepackage{booktabs,multicol,multirow,tabularx,array}          % Packages para tabela
+% -------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\textwidth 13.5cm
+\textheight 19.5cm
+\columnsep .5cm
+% -------------------------------------------------------------------
+\newcommand{\AVR}{\textsc{Avr}\xspace}
+\title{\renewcommand{\baselinestretch}{1.17}\normalsize\bf%
+  Phase 1 Report | Project in Embedded Systems 15hp 1TE721\\
+  \vspace{2mm}
+  \uppercase{A fermentation temperature monitoring system}\\
+  using Atmel AVR and an ARM single-board computer\\
+}
+% -------------------------------------------------------------------
+\author{%
+  Group 1: August Forsman\\
+  \small aufo8456@student.uu.se
+}
+% -------------------------------------------------------------------
+\begin{document}
+
+\date{}
+
+\maketitle
+
+\vspace{-0.5cm}
+
+\baselineskip=\normalbaselineskip
+% -------------------------------------------------------------------
+
+\section*{Summary}%
+The work is finished in time according to the project plan.
+\label{sec:summary}
+
+\section*{Design}%
+\label{sec:design}
+
+\subsection*{Communication protocols}%
+\label{sub:communication_protocols}
+
+\section*{Hardware and development tools}%
+\label{sec:hardware_and_development_tools}
+
+\section*{Conclusion}%
+\label{sec:conclusion}
+
+\section*{Starting with Phase 2}%
+\label{sec:phase_2}
+
+Phase 2 can be implemented. 
+
+\end{document}
+% AVR data sheet
+% UART
+% Maxim Integr data sheet
+% Arch Linux Arm
+% Neovim repo
