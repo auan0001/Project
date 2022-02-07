@@ -80,6 +80,10 @@ DEADLINE: <2022-02-03 Thu>
 DEADLINE: <2022-02-03 Thu>
  :TAGS: :@avr:
 
+** TODO Clean repo, add .gitignore
+DEADLINE: <2022-02-08 Tue>
+ :TAGS: :@project:
+
 * Meetings
 
 ** DONE Present S1 prel. plan
