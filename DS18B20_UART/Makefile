@@ -1,14 +1,18 @@
-FILENAME   = main
-HEADER1		 = onewire
-HEADER2		 = uart
-F_CPU = 16000000UL
-PORT       = /dev/ttyUSB0
-DEVICE     = atmega328p
-PROGRAMMER = avrisp
-BAUD       = 57600
-FLAGS			 = -Wall -Os -ffreestanding
-COMPILE    = avr-gcc $(FLAGS) -mmcu=$(DEVICE) -DBAUD=$(BAUD) -DF_CPU=$(F_CPU) -I$(INCLUDE)
-INCLUDE		 = ./inc
+# Makefile for ATmega328p written by August Forsman
+
+FILENAME		= main
+HEADER1			= onewire
+HEADER2			= uart
+F_CPU				= 16000000UL
+PORT				= /dev/ttyUSB0
+DEVICE			= atmega328p
+PROGRAMMER 	= avrisp
+BAUD				= 57600
+FLAGS				= -Wall -Os -ffreestanding
+COMPILE			= avr-gcc $(FLAGS) -mmcu=$(DEVICE) -DBAUD=$(BAUD) -DF_CPU=$(F_CPU) -I$(INCLUDE)
+INCLUDE			= ./inc
+
+# TODO fix dependencies
 
 default: compile upload clean
 
