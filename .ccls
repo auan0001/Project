@@ -2,9 +2,12 @@ clang
 -target
 avr
 -mmcu=atmega328p
+-DF_CPU=16000000UL
+-DBAUD=57600
 -nostdinc
 -ffreestanding
 -isystem/usr/avr/include
 -I./include
+-I../inc
 %h -x
 %h c-header

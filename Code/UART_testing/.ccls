@@ -1,8 +1,0 @@
-clang
--target
-avr
--nostdinc
--ffreestanding
--isystem/usr/avr/include
-%h -x
-%h c-header

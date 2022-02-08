@@ -1,6 +1,6 @@
 #ifndef UART_H_
 #define UART_H_
-#include "avrconf.h"
+//#include "avrconf.h"
 #include <avr/io.h>
 #include <util/delay.h>
 #include <util/setbaud.h>
