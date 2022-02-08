@@ -82,5 +82,8 @@
     <requires type="dynamic">
       <file>aufo_report_phase1.bcf</file>
     </requires>
+    <requires type="editable">
+      <file>~/bibliography.bib</file>
+    </requires>
   </external>
 </requests>

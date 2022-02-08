@@ -1,5 +1,14 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
-[1] Config.pm:314> INFO - Logfile is 'aufo_report_phase1.blg'
-[104] biber:340> INFO - === Mon Feb  7, 2022, 20:48:54
-[127] Biber.pm:415> INFO - Reading 'aufo_report_phase1.bcf'
-[218] Utils.pm:395> WARN - No data sources defined!
+[0] Config.pm:314> INFO - Logfile is 'aufo_report_phase1.blg'
+[95] biber:340> INFO - === Tue Feb  8, 2022, 17:31:13
+[113] Biber.pm:415> INFO - Reading 'aufo_report_phase1.bcf'
+[201] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[220] Biber.pm:4340> INFO - Processing section 0
+[234] Biber.pm:4531> INFO - Looking for bibtex format file '~/bibliography.bib' for section 0
+[300] bibtex.pm:1689> INFO - LaTeX decoding ...
+[306] bibtex.pm:1494> INFO - Found BibTeX data source '/home/auan/bibliography.bib'
+[365] UCollate.pm:68> INFO - Overriding locale 'se_EN' defaults 'variable = shifted' with 'variable = non-ignorable'
+[365] UCollate.pm:68> INFO - Overriding locale 'se_EN' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[365] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'se_EN'
+[373] bbl.pm:654> INFO - Writing 'aufo_report_phase1.bbl' with encoding 'UTF-8'
+[375] bbl.pm:757> INFO - Output to aufo_report_phase1.bbl

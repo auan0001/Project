@@ -61,8 +61,11 @@ CLOSED: [2022-02-03 Thu 16:12] DEADLINE: <2022-02-03 Thu>
 :END:
  :TAGS: :@avr: :@rpi:
 
-** TODO P1 report
-DEADLINE: <2022-02-06 Sun 23:59>
+** DONE P1 report
+CLOSED: [2022-02-08 Tue 19:42] DEADLINE: <2022-02-06 Sun 23:59>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-08 Tue 19:42]
+:END:
  :TAGS: :@project:
 
 ** DONE UART Rx

@@ -1,0 +1,109 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{atmega328p}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44ca33799bc2714094309178874ed121}{%
+           family={{Atmel Corporation}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{44ca33799bc2714094309178874ed121}
+      \strng{fullhash}{44ca33799bc2714094309178874ed121}
+      \strng{bibnamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authorbibnamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authornamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authorfullhash}{44ca33799bc2714094309178874ed121}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ATmega328p Datasheet}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+      \endverb
+      \verb{url}
+      \verb https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+      \endverb
+    \endentry
+    \entry{interfaceDS18B20}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=708945beacf49e6e06951ec3f877a859}{%
+           family={{Maxim Integrated}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{708945beacf49e6e06951ec3f877a859}
+      \strng{fullhash}{708945beacf49e6e06951ec3f877a859}
+      \strng{bibnamehash}{708945beacf49e6e06951ec3f877a859}
+      \strng{authorbibnamehash}{708945beacf49e6e06951ec3f877a859}
+      \strng{authornamehash}{708945beacf49e6e06951ec3f877a859}
+      \strng{authorfullhash}{708945beacf49e6e06951ec3f877a859}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Application Note 162}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.maximintegrated.com/en/design/technical-documents/app-notes/1/162.html
+      \endverb
+      \verb{url}
+      \verb https://www.maximintegrated.com/en/design/technical-documents/app-notes/1/162.html
+      \endverb
+    \endentry
+    \entry{alarmv8}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9efe0bf9936bb6452a31f40c0605afb6}{%
+           family={{Arch Linux ARM}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \strng{fullhash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \strng{bibnamehash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \strng{authorbibnamehash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \strng{authornamehash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \strng{authorfullhash}{9efe0bf9936bb6452a31f40c0605afb6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Raspberry Pi 3}}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
+      \endverb
+      \verb{url}
+      \verb https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

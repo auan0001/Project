@@ -10,11 +10,12 @@
     style=ieee,
     sortlocale=se_EN,
     natbib=true,
-    url=false, 
+    url=true, 
+    urldate=comp, 
     doi=true,
     eprint=false
 ]{biblatex}
-%\addbibresource{~/bibliography.bib}
+\addbibresource{~/bibliography.bib}
 \usepackage{xspace}
 \usepackage{csquotes}
 \usepackage{graphicx}
@@ -55,28 +56,47 @@
 % -------------------------------------------------------------------
 
 \section*{Summary}%
+Phase 1 of the project has mainly consisted of
+\begin{enumerate}
+  \item Configuring UART drivers for the ATmega328p MCU
+  \item Setting up 1-Wire communication between the MCU and DS18B20
+  \item Confirming that the communication works through serial communication between the MCU and Raspberry Pi
+\end{enumerate}
 The work is finished in time according to the project plan.
 \label{sec:summary}
 
 \section*{Design}%
 \label{sec:design}
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.6\linewidth]{~/Downloads/Screenshot 2022-02-08 at 16-12-04 1TE721 Phase 1.png}
+  \caption{The system design layout}%
+  \label{fig:p1}
+\end{figure}
+Figure \ref{fig:p1} shows a brief sketch of the implementation, where in Phase 1, it is not yet connected to the cloud. 
 
 \subsection*{Communication protocols}%
 \label{sub:communication_protocols}
+1-Wire is used as the bus communication system between the sensor and MCU, which is driven by one of the pins. A command example is sending a reset pulse (falling edge followed by a low signal for 480 microseconds) which can be followed by sending a hexadecimal byte (\verb|0x00| to \verb|0xFF|) that can be decoded as an instruction by the sensor.
 
+The Arduino Nano board has a USB to serial chip which allows the Raspberry Pi to send and receive data using a USB Mini-B cable. This is possible through UART (Universal Asynchronous Receiver/Transmitter) and can be configured according to the datasheet by activating the correct registers and setting the transfer speed for the bytes communicated by the two units.
 \section*{Hardware and development tools}%
 \label{sec:hardware_and_development_tools}
-
+\begin{enumerate}
+  \item Arduino Nano Board (based on an ATmega328p) on a breadboard \cite{atmega328p}
+  \item Maxim Integrated DS18B20 1-wire temperature sensor with a 4.7 k$\Omega$ pull-up resistor \cite{interfaceDS18B20}
+  \item Raspberry Pi 3B v1.2 running 64 bit Arch Linux ARM \cite{alarmv8}
+  \item The Embedded-C software is developed in Neovim, using the CCLS language server and compiled using the AVR-GCC toolchain through GNU Make
+\end{enumerate}
 \section*{Conclusion}%
 \label{sec:conclusion}
 
-\section*{Starting with Phase 2}%
-\label{sec:phase_2}
+Phase 2 is ready to be implemented. The results in Phase 1 produces live data and can be used in Phase 2. If more data is needed, it is easy to generate dummy-data in order to test tools for time-series analysis in the server.
 
-Phase 2 can be implemented. 
-
+\newpage
+\printbibliography
 \end{document}
-% AVR data sheet
+
 % UART
 % Maxim Integr data sheet
 % Arch Linux Arm
