@@ -6,7 +6,7 @@ PORT       = /dev/ttyUSB0
 DEVICE     = atmega328p
 PROGRAMMER = avrisp
 BAUD       = 57600 
-COMPILE    = avr-gcc -Wall -Os -mmcu=$(DEVICE) -DF_CPU=$(F_CPU) -I$(INCLUDE)
+COMPILE    = avr-gcc -Wall -Os -ffreestanding -mmcu=$(DEVICE) -DF_CPU=$(F_CPU) -I$(INCLUDE)
 INCLUDE		 = ./include
 
 
