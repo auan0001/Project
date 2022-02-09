@@ -1,0 +1,3 @@
+#+TITLE: Project in Embedded Systems 1TE723
+
+A Computational Science student learning more about AVR micro-controller units.
