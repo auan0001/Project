@@ -1,6 +1,7 @@
 #ifndef UART_H_
 #define UART_H_
-//#include "avrconf.h"
+/* TODO get rid of this redefenition */
+#define BAUD 9600
 #include <avr/io.h>
 #include <util/delay.h>
 #include <util/setbaud.h>
