@@ -24,6 +24,8 @@ modified by Martin Thomas (mthomas(at)rhrk.uni-kl.de)
 #include "onewire.h"
 #include "uart.h"
 
+#define MAX_FLOAT 127.9375
+
 #ifdef OW_ONE_BUS
 
 #define OW_GET_IN()   ( OW_IN & (1<<OW_PIN))
@@ -318,11 +320,16 @@ void ow_temp_rd(char *buffer)
 
   // Store temperature int and dec digits
   digit = temperature[0] >> 4;
-  digit |= (temperature[1] & 0x7) << 4;
+  digit |= (temperature[1] & 0b00000111) << 4;
+  if (temperature[1] > 0b01111111) {
+    digit = digit - MAX_FLOAT;
+  }
 
   // Store dec digits
   decimal = temperature[0] & 0xf;
   decimal *= OW_DEC_STEP_12BIT;
 
-  sprintf(buffer, "%+d.%04u C", digit, decimal);
+  /*sprintf(buffer, "%u.%u | %d.%04u", temperature[1], temperature[0], digit, decimal);*/
+  /*sprintf(buffer, "%u.%u", temperature[1], temperature[0]);*/
+  sprintf(buffer, "%+d.%04u", digit, decimal);
 }
