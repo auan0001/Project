@@ -79,13 +79,36 @@ CLOSED: [2022-02-03 Thu 22:22] DEADLINE: <2022-02-03 Thu>
 DEADLINE: <2022-02-03 Thu>
  :TAGS: :@avr: :@rpi:
 
-** TODO Shrink onewire.h (omit parasite etc)
-DEADLINE: <2022-02-03 Thu>
+** CANC Shrink onewire.h (omit parasite etc)
+CLOSED: [2022-02-09 Wed 22:41] DEADLINE: <2022-02-03 Thu>
+:LOGBOOK:
+- State "CANC"       from "TODO"       [2022-02-09 Wed 22:41] \\
+  Not gonna touch the library right now
+:END:
  :TAGS: :@avr:
 
-** TODO Clean repo, add .gitignore
-DEADLINE: <2022-02-08 Tue>
+** DONE Clean repo, add .gitignore
+CLOSED: [2022-02-09 Wed 22:41] DEADLINE: <2022-02-08 Tue>
+:LOGBOOK:
+- State "DONE"       from "SOMEDAY"    [2022-02-09 Wed 22:41]
+:END:
  :TAGS: :@project:
+
+** TODO Dash app running
+DEADLINE: <2022-02-11 Fri>
+ :TAGS: :@rpi:
+
+** TODO Dash app real data
+DEADLINE: <2022-02-11 Fri>
+ :TAGS: :@rpi:
+
+** TODO Dash app running through Flask
+DEADLINE: <2022-02-11 Fri>
+ :TAGS: :@rpi:
+
+** TODO Flask daemonized
+DEADLINE: <2022-02-11 Fri>
+ :TAGS: :@rpi:
 
 * Meetings
 
