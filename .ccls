@@ -9,5 +9,6 @@ avr
 -isystem/usr/avr/include
 -I./include
 -I../inc
+-I./inc
 %h -x
 %h c-header

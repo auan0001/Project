@@ -329,7 +329,5 @@ void ow_temp_rd(char *buffer)
   decimal = temperature[0] & 0xf;
   decimal *= OW_DEC_STEP_12BIT;
 
-  /*sprintf(buffer, "%u.%u | %d.%04u", temperature[1], temperature[0], digit, decimal);*/
-  /*sprintf(buffer, "%u.%u", temperature[1], temperature[0]);*/
-  sprintf(buffer, "%+d.%04u", digit, decimal);
+  sprintf(buffer, "%d.%04u", digit, decimal);
 }

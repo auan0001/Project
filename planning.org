@@ -75,8 +75,11 @@ CLOSED: [2022-02-03 Thu 22:22] DEADLINE: <2022-02-03 Thu>
 :END:
  :TAGS: :@avr:
 
-** TODO Read temp instruction from UART
-DEADLINE: <2022-02-03 Thu>
+** DONE Read temp instruction from UART
+CLOSED: [2022-02-14 Mon 22:08] DEADLINE: <2022-02-03 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-14 Mon 22:08]
+:END:
  :TAGS: :@avr: :@rpi:
 
 ** CANC Shrink onewire.h (omit parasite etc)
@@ -94,12 +97,18 @@ CLOSED: [2022-02-09 Wed 22:41] DEADLINE: <2022-02-08 Tue>
 :END:
  :TAGS: :@project:
 
-** TODO Dash app running
-DEADLINE: <2022-02-11 Fri>
+** DONE Dash app running
+CLOSED: [2022-02-14 Mon 22:08] DEADLINE: <2022-02-11 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-14 Mon 22:08]
+:END:
  :TAGS: :@rpi:
 
-** TODO Dash app real data
-DEADLINE: <2022-02-11 Fri>
+** DONE Dash app real data
+CLOSED: [2022-02-14 Mon 22:08] DEADLINE: <2022-02-11 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-14 Mon 22:08]
+:END:
  :TAGS: :@rpi:
 
 ** TODO Dash app running through Flask
@@ -108,6 +117,10 @@ DEADLINE: <2022-02-11 Fri>
 
 ** TODO Flask daemonized
 DEADLINE: <2022-02-11 Fri>
+ :TAGS: :@rpi:
+
+** TODO Dash app real live data
+DEADLINE: <2022-02-15 Tue>
  :TAGS: :@rpi:
 
 * Meetings
