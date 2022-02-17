@@ -30,7 +30,7 @@ posts.drop()
 def get_temperature(temp):
     ser.write(bytes(b'R'))
     line = ser.readline().decode()
-    if len(line) > 6:   # if not trash
+    if len(line) > 6 and float(line.strip('\x00\n')) < 50:   # if not trash
         temp = (float(line.strip('\x00\n')))
     # else:               # try again
         # line = ser.readline().decode()
