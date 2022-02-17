@@ -23,6 +23,7 @@ void main(void)
     {
       data = uart_read();
       if (data == 'R') {
+        ow_reset();
         ow_temp_rd(buffer);
         uart_send_arr(buffer, len);
         /*uart_send_byte('\r');*/
