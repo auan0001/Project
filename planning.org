@@ -111,16 +111,26 @@ CLOSED: [2022-02-14 Mon 22:08] DEADLINE: <2022-02-11 Fri>
 :END:
  :TAGS: :@rpi:
 
-** TODO Dash app running through Flask
-DEADLINE: <2022-02-11 Fri>
+** DONE Dash app running through Flask
+CLOSED: [2022-02-15 Tue 23:00] DEADLINE: <2022-02-11 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-15 Tue 23:00]
+:END:
  :TAGS: :@rpi:
 
 ** TODO Flask daemonized
 DEADLINE: <2022-02-11 Fri>
  :TAGS: :@rpi:
 
-** TODO Dash app real live data
-DEADLINE: <2022-02-15 Tue>
+** DONE Dash app real live data
+CLOSED: [2022-02-17 Thu 16:14] DEADLINE: <2022-02-15 Tue>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-17 Thu 16:14]
+:END:
+ :TAGS: :@rpi:
+
+** TODO Serial to DB daemonized
+DEADLINE: <2022-02-18 Fri>
  :TAGS: :@rpi:
 
 * Meetings

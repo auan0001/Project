@@ -16,22 +16,29 @@ import plotly.graph_objs as go
 import re
 
 ''' **************************************** '''
-ser = serial.Serial("/dev/ttyUSB0", 9600)
+# ser = serial.Serial("/dev/ttyUSB0", 9600)
 
-temp = 0
+# temp = 0
+BAUD = 9600
+IP_ADR = 27017
 
 ''' MongoDB '''
-client = MongoClient('localhost', 27017)
-db = client.test_db
-collection = db.btlog
-posts = db.posts
-posts.drop()
+client = MongoClient('localhost', IP_ADR)
+db = client.beertemp
+collection = db.log
+entry = db.entries
+
+# ''' MongoDB '''
+# client = MongoClient('localhost', IP_ADR)
+# db = client.beertemp
+# collection = db.log
+# entry = db.entries
 
 def get_temperature(temp):
     ser.write(bytes(b'R'))
     line = ser.readline().decode()
-    if len(line) > 6 and float(line.strip('\x00\n')) < 50:   # if not trash
-        temp = (float(line.strip('\x00\n')))
+    if len(line) > 6 and float(line.strip('\x00\n\r')) < 50:   # if not trash
+        temp = (float(line.strip('\x00\n\r')))
     # else:               # try again
         # line = ser.readline().decode()
         # temp = (float(line.strip('\x00\n')))
@@ -40,7 +47,7 @@ def get_temperature(temp):
 def temp_to_db(temp):
     temp_entry = {"temperature": get_temperature(temp),
             "time": dt.utcnow()} 
-    posts.insert_one(temp_entry)
+    entry.insert_one(temp_entry)
 
 ''' **************************************** '''
 
@@ -52,7 +59,7 @@ app.layout = html.Div([
     html.H1('Beer Temperature Logging'),
     html.H3('This is a live feed!'),
     html.Div([
-        dcc.Graph(id='live-update-graph-scatter', animate=False),
+        # dcc.Graph(id='live-update-graph-scatter', animate=False),
         html.H3('Filter number of entries in database'),
         dcc.Input(id='resolution', value='20', type='text'),
         dcc.Graph(id='history-graph-scatter', animate=False),
@@ -64,28 +71,27 @@ app.layout = html.Div([
     ])
 
 
-@app.callback(Output('live-update-graph-scatter', 'figure'),
-        Input('interval-component', 'n_intervals'))
-def update_graph_scatter(graph_update):
-    traces = list()
-    temp_to_db(temp)
-    live_res = 20
-    temp_offset = 2
+# @app.callback(Output('live-update-graph-scatter', 'figure'),
+        # Input('interval-component', 'n_intervals'))
+# def update_graph_scatter(graph_update):
+    # traces = list()
+    # temp_to_db(temp)
+    # live_res = 20
+    # temp_offset = 2
 
-    df = pd.DataFrame(list(db.posts.find().limit(int(live_res)).sort([('$natural',-1)])))
-    traces.append(plotly.graph_objs.Scatter(
-    x=df['time'],
-    y=df['temperature'],
-    name='Beer temperature',
-    mode= 'lines+markers'
-    ))
+    # df = pd.DataFrame(list(db.entries.find().limit(int(live_res)).sort([('$natural',-1)])))
+    # traces.append(plotly.graph_objs.Scatter(
+    # x=df['time'],
+    # y=df['temperature'],
+    # name='Beer temperature',
+    # mode= 'lines+markers'
+    # ))
 
-    layout = plotly.graph_objs.Layout(
-            yaxis=dict(range=[min(df['temperature'])-temp_offset,
-                max(df['temperature'])+temp_offset]))
-    return {'data': traces, 'layout': layout}
+    # layout = plotly.graph_objs.Layout(
+            # yaxis=dict(range=[min(df['temperature'])-temp_offset,
+                # max(df['temperature'])+temp_offset]))
+    # return {'data': traces, 'layout': layout}
 
-# State?
 @app.callback(Output('history-graph-scatter', 'figure'),
         Input(component_id='resolution', component_property='value'))
 # @app.callback(Output('live-update-graph-scatter', 'figure'))
@@ -99,7 +105,7 @@ def update_history(resolution):
     else:
         valid_res = fallback_res
 
-    df = pd.DataFrame(list(db.posts.find().limit(int(valid_res)).sort([('$natural',-1)])))
+    df = pd.DataFrame(list(db.entries.find().limit(int(valid_res)).sort([('$natural',-1)])))
     traces.append(plotly.graph_objs.Scatter(
     x=df['time'],
     y=df['temperature'],
