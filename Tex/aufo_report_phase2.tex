@@ -1,0 +1,167 @@
+\documentclass[10pt]{article}
+% -------------------------------------------------------------------
+\usepackage[utf8]{inputenc}				
+\usepackage[T1]{fontenc}					
+\usepackage[english]{babel}
+\usepackage[margin=5cm]{geometry}
+% -------------------------------------------------------------------
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sortlocale=se_EN,
+    natbib=true,
+    url=true, 
+    urldate=comp, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\addbibresource{~/bibliography.bib}
+\usepackage{xspace}
+\usepackage{csquotes}
+\usepackage{listings}
+\lstset{
+  belowcaptionskip=0em,
+  aboveskip = 1em,
+  belowskip=2em,
+  framexbottommargin=0pt,
+  language=c,                % choose the language of the code
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,                   % where to put the line-numbers
+  stepnumber=1,                   % the step between two line-numbers.
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. 
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+frame=single,
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[2]{word1,word2}, emphstyle=[2]{style},
+    commentstyle=\color{blue},
+    stringstyle=\color{purple},
+}
+\lstset{basicstyle=\ttfamily\footnotesize}
+\lstset{extendedchars=\true}
+\lstset{inputencoding=ansinew}
+\lstset{breaklines=true}
+
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath,amssymb}
+\usepackage{subfig,epsfig,tikz,float}		            % Packages de figuras. 
+% -------------------------------------------------------------------
+\usepackage{booktabs,multicol,multirow,tabularx,array}          % Packages para tabela
+% -------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\textwidth 13.5cm
+\textheight 19.5cm
+\columnsep .5cm
+% -------------------------------------------------------------------
+\newcommand{\AVR}{\textsc{Avr}\xspace}
+\title{\renewcommand{\baselinestretch}{1.17}\normalsize\bf%
+  Phase 2 Report | Project in Embedded Systems 15hp 1TE721\\
+  \vspace{2mm}
+  \uppercase{A fermentation temperature monitoring system}\\
+  using Atmel AVR and an ARM single-board computer\\
+}
+% -------------------------------------------------------------------
+\author{%
+  Group 1: August Forsman\\
+  \small aufo8456@student.uu.se
+}
+% -------------------------------------------------------------------
+\begin{document}
+\newgeometry{top=1cm,bottom=5cm,right=4cm,left=4cm}
+\date{}
+
+\maketitle
+
+\vspace{-0.5cm}
+
+\baselineskip=\normalbaselineskip
+% -------------------------------------------------------------------
+
+\section*{Summary}%
+\label{sec:summary}
+Phase 2 of the project has mainly consisted of
+\begin{enumerate}
+  \item Tuning the UART communication between the ATmega328p MCU and Raspberry Pi
+  \item Choosing and configuring a suitable database and entry formatting
+  \item Fail safe data collection  
+  \item Testing the web application visualization with live data
+\end{enumerate}
+The work is finished in time according to the project plan for Phase 2.
+
+\section*{UART communication}%
+\label{sec:uart_communication}
+The serial communication between the RPi and MCU is done through the Python module pySerial which is supplied the Baud rate and port. In order to synchronize the data transfer, the temperature is fetched by sending a byte instruction \verb|write(b'R')| followed by a \verb|readline.decode()| in order to read the returning bytes containing a string formatted floating point temperature. The scheduled transfer rate relies on the clock of the RPi and is set in a Python script using the \verb|time| module. 
+
+\section*{Choice of database}%
+\label{sec:choice_of_database}
+The document database MongoDB is chosen as the back end storage of the temperature data. The Python module PyMongo integrates the connection with the web application and the database storage. Another feature is that it is easily converted to Pandas \verb|DataFrames| for in order to statistically analyze time-series data. 
+
+\section*{Fail safe data collection}%
+\label{sec:fail_safe_data_collection}
+In order to be able to gather data as fail safe as possible, the data collection script is administered by a Systemd service. Systemd is a system and service manager suite used by Arch Linux ARM (and a majority of other UNIX-like operating systems) in order to boot, mount file systems and manage daemons to name a few.
+
+\begin{lstlisting}[caption={The systemd service that manages data collection}, label={systemd}]
+ # Systemd service for logging temperature
+# Use the command
+#       sudo loginctl enable-linger $USER
+# in order to enable the systemd instance to
+# run even if the user is not logged in.
+
+[Unit]
+# Human readable unit name
+Description=Reads serially from /dev/ttyUSB* and puts in MongoDB
+
+[Service]
+# Command that executes script
+ExecStart=/usr/bin/python /home/alarm/Project/serial_temp_to_db.py
+# Write to print() to journal
+Environment=PYTHONUNBUFFERED=1
+# Able to notify
+Type=notify
+# If it crashes with a non-zero exit code, then restart
+Restart=always
+
+[Install]
+# Start service at boot
+WantedBy=default.target
+ 
+\end{lstlisting}
+
+The service in Listing \ref{systemd} utilizes the operating systems logging and prints initialization procedures as well as exception during runtime.
+
+\section*{Web app visualization}%
+Plotly is an open source Python module which provides the Dash web application environment.
+\label{sec:design}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.9\linewidth]{~/Downloads/Screenshot 2022-02-20 at 18-48-23 Dash.png}
+  \caption{Temperature curve plotted in Plotly running in a Dash web application}%
+  \label{fig:dash}
+\end{figure}
+
+As for now, the server hosted by the RPi is reached by a certain port accessible for units on the local network.  
+
+\newpage
+\subsection*{Conclusion and further work in the Final Phase}%
+\label{sec:conclusion}
+Further work regarding the web application is proper deployment through a service such as Flask. The full set of features that Dash has is still not known but it seems to cover some statistical features of interest. One idea of a proposed layout is a live graph containing the latest It has been discussed in the grading criteria that some kind of callback function should be applied in order to set a value that is passed to the MCU as a control parameter. However, it seems quite risky to alter the power circuits of a high voltage freezer in order to control the temperature and should be discussed with the project supervisor.
+
+\newpage
+%\printbibliography
+\end{document}
+
+% UART
+% Maxim Integr data sheet
+% Arch Linux Arm
+% Neovim repo

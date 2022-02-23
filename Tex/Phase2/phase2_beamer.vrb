@@ -1,0 +1,15 @@
+\Frametitle{DB to graph}
+    \begin{lstlisting}[caption={Getting data from DB and plotting using Plotly}, label={dbplot}]
+client = MongoClient('localhost', IP_ADR) # MongoDB
+db = client.beertemp
+
+...
+
+df = pd.DataFrame(list(db.entries.find().limit(int(LIVE_RES)).sort([('$natural',-1)]))) # Data in span from past to present
+    trace = go.Scatter( # Scatter plot
+        x=df['time'],
+        y=df['temperature'])
+...
+
+return fig
+    \end{lstlisting}

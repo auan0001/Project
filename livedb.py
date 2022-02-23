@@ -14,13 +14,16 @@ import plotly
 from random import random
 import plotly.graph_objs as go
 import re
+from scipy.signal import savgol_filter
 
 ''' **************************************** '''
-# ser = serial.Serial("/dev/ttyUSB0", 9600)
 
-# temp = 0
+# TODO add constants
 BAUD = 9600
 IP_ADR = 27017
+MINUTE_MS = 600000
+PADDING = 150
+BG_COLOR = '#FFFFFF'
 
 ''' MongoDB '''
 client = MongoClient('localhost', IP_ADR)
@@ -28,95 +31,109 @@ db = client.beertemp
 collection = db.log
 entry = db.entries
 
-# ''' MongoDB '''
-# client = MongoClient('localhost', IP_ADR)
-# db = client.beertemp
-# collection = db.log
-# entry = db.entries
-
-def get_temperature(temp):
-    ser.write(bytes(b'R'))
-    line = ser.readline().decode()
-    if len(line) > 6 and float(line.strip('\x00\n\r')) < 50:   # if not trash
-        temp = (float(line.strip('\x00\n\r')))
-    # else:               # try again
-        # line = ser.readline().decode()
-        # temp = (float(line.strip('\x00\n')))
-    return temp
-
-def temp_to_db(temp):
-    temp_entry = {"temperature": get_temperature(temp),
-            "time": dt.utcnow()} 
-    entry.insert_one(temp_entry)
-
 ''' **************************************** '''
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-app.layout = html.Div([
+app.layout = html.Div(style={'padding': PADDING, 'background' : BG_COLOR}, children =[
     html.H1('Beer Temperature Logging'),
     html.H3('This is a live feed!'),
     html.Div([
-        # dcc.Graph(id='live-update-graph-scatter', animate=False),
+        dcc.Graph(id='live-update-graph-scatter', animate=False),
         html.H3('Filter number of entries in database'),
-        dcc.Input(id='resolution', value='20', type='text'),
+        dcc.Input(id='resolution', value='2000', type='text'),
         dcc.Graph(id='history-graph-scatter', animate=False),
         dcc.Interval(
             id='interval-component',
-            interval=1*2000
+            interval=1*MINUTE_MS
             )
         ])
     ])
 
 
-# @app.callback(Output('live-update-graph-scatter', 'figure'),
-        # Input('interval-component', 'n_intervals'))
-# def update_graph_scatter(graph_update):
-    # traces = list()
-    # temp_to_db(temp)
-    # live_res = 20
-    # temp_offset = 2
+@app.callback(Output('live-update-graph-scatter', 'figure'),
+        Input('interval-component', 'n_intervals'))
+def update_graph_scatter(graph_update):
+    LIVE_RES = 200
 
-    # df = pd.DataFrame(list(db.entries.find().limit(int(live_res)).sort([('$natural',-1)])))
-    # traces.append(plotly.graph_objs.Scatter(
-    # x=df['time'],
-    # y=df['temperature'],
-    # name='Beer temperature',
-    # mode= 'lines+markers'
-    # ))
+    try:
+        df = pd.DataFrame(list(db.entries.find().limit(int(LIVE_RES)).sort([('$natural',-1)])))
+        trace = go.Scatter(
+            x=df['time'],
+            y=df['temperature'],
+            name='Beer temperature',
+            mode= 'lines+markers',
+            marker = {'color': 'Blue',
+                'size': 4}
+            )
+    except Exception as e:
+        print(str(e))
 
-    # layout = plotly.graph_objs.Layout(
-            # yaxis=dict(range=[min(df['temperature'])-temp_offset,
-                # max(df['temperature'])+temp_offset]))
-    # return {'data': traces, 'layout': layout}
+    layout = go.Layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            margin=dict(l=20, r=20, t=50, b=50),
+            yaxis= {'autorange': True}
+            )
 
+    fig = go.Figure(data=[trace], layout=layout)
+
+    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='Grey')
+    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='Grey')
+
+    return fig 
+
+# TODO callback to apply Savgol filtering
 @app.callback(Output('history-graph-scatter', 'figure'),
         Input(component_id='resolution', component_property='value'))
 # @app.callback(Output('live-update-graph-scatter', 'figure'))
 def update_history(resolution):
+    SAVGOL_WIN_LEN = 201
     # num_filter = re.compile(r'\D')
-    traces = list()
-    fallback_res = 200
+    FALLBACK_RES = 2000
     # if resolution != '' and num_filter.findall(resolution) != [] \
-    if resolution != '' and int(resolution) > 0: 
+    if resolution != '' and int(resolution) > SAVGOL_WIN_LEN: 
         valid_res = resolution
     else:
-        valid_res = fallback_res
+        valid_res = FALLBACK_RES
 
-    df = pd.DataFrame(list(db.entries.find().limit(int(valid_res)).sort([('$natural',-1)])))
-    traces.append(plotly.graph_objs.Scatter(
-    x=df['time'],
-    y=df['temperature'],
-    name='Beer temperature',
-    mode= 'lines+markers'
-    ))
+    try:
+        df = pd.DataFrame(list(db.entries.find().limit(int(valid_res)).sort([('$natural',-1)])))
+        trace1 = go.Scatter(
+            x=df['time'],
+            y=df['temperature'],
+            name='Beer temperature',
+            mode= 'markers',
+            marker = {'color': 'Blue',
+                'size': 3}
+            )
 
-    layout = plotly.graph_objs.Layout(
-            yaxis=dict(range=[min(df['temperature'])-2,
-                max(df['temperature'])+2]))
-    return {'data': traces, 'layout': layout}
+        trace2 = go.Scatter(
+            x=df['time'],
+            y=savgol_filter(df['temperature'], SAVGOL_WIN_LEN, 2),
+            name='Filtered signal',
+            mode= 'lines+markers',
+            marker = {'color': 'Red',
+                'size': 2}
+            )
+    except Exception as e:
+        print(str(e))
+
+    layout = go.Layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            margin=dict(l=20, r=20, t=50, b=50),
+            yaxis= {'autorange': True}
+            )
+
+    fig = go.Figure(data=[trace1, trace2], layout=layout)
+
+    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='Grey')
+    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='Grey')
+
+    return fig
 
 if __name__ == '__main__':
     app.run_server(debug=True, host="0.0.0.0")

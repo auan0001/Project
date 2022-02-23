@@ -1,0 +1,9 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'aufo_report_phase2.blg'
+[93] biber:340> INFO - === Sun Feb 20, 2022, 21:04:31
+[110] Biber.pm:415> INFO - Reading 'aufo_report_phase2.bcf'
+[196] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
+[206] Utils.pm:395> WARN - The file 'aufo_report_phase2.bcf' does not contain any citations!
+[215] bbl.pm:654> INFO - Writing 'aufo_report_phase2.bbl' with encoding 'UTF-8'
+[216] bbl.pm:757> INFO - Output to aufo_report_phase2.bbl
+[216] Biber.pm:128> INFO - WARNINGS: 1

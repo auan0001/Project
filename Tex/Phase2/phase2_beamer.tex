@@ -1,0 +1,238 @@
+% Uppsala University presentation template
+% Created 2021-03 by Mats Jonsson, mats@mekeriet.se
+
+\documentclass[aspectratio=169, 9pt]{uu-beamer}
+\usepackage{mwe} % for example image
+\usepackage{listings}
+\lstset{
+  belowcaptionskip=0em,
+  aboveskip = 1em,
+  belowskip=2em,
+  framexbottommargin=0pt,
+  language=bash,                % choose the language of the code
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,                   % where to put the line-numbers
+  stepnumber=1,                   % the step between two line-numbers.
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. 
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+frame=single,
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[2]{word1,word2}, emphstyle=[2]{style},
+    commentstyle=\color{blue},
+    stringstyle=\color{purple},
+}
+\lstset{basicstyle=\ttfamily\footnotesize}
+\lstset{extendedchars=\true}
+\lstset{inputencoding=ansinew}
+\lstset{breaklines=true}
+
+\graphicspath{{images/}, {style/graphics/}} % Put graphics and images in images/ directory
+
+% ------------------- Title -------------------------
+\title{Phase 2 Presentation}
+\subtitle{Project in Embedded Systems | 1TE721}
+\author[A. Forsman]{August Forsman}
+\date{\today}
+\institute[UU]{Uppsala Universitet}
+
+\begin{document}
+
+% Logo page
+%\logopage
+
+% Main presentation title page
+\titlepage
+
+
+% Title page
+%\anothertitle{Phase 2 Presentation}{Group 1 -- August Forsman}
+
+% Two-column with image 
+\begin{frame}
+    \Frametitle{Summary of Phase 2}
+    The work is finished according to the project plan.
+    \vspace{5mm}
+    \begin{columns}
+        \column{0.7\textwidth}
+        \begin{enumerate}
+          \item Tuning the UART communication between the ATmega328p MCU and Raspberry Pi
+          \item Choosing and configuring a suitable database and entry formatting
+          \item Fail safe data collection  
+          \item Testing the web application visualization with live data
+        \end{enumerate}
+
+        %\column{0.5\textwidth}
+        %\includegraphics[keepaspectratio,width=\textwidth,height=\textheight]{example-image}
+      \end{columns}
+    
+\end{frame}
+
+% Two-column with image 
+\begin{frame}
+    \Frametitle{Data collection and visualization}
+    A selection of used Python modules\ldots \\
+    Down the dependency hole, we go!
+    \begin{columns}
+        \column{0.6\textwidth}
+        \begin{enumerate}
+          \item PySerial -- serial communication through UART 
+          \item pyMongo -- setup and interact with MongoDB
+          \item Plotly and Dash -- graphs and web app  
+          \item Testing the web application visualization with live data
+        \end{enumerate}
+
+        \column{0.5\textwidth}
+        \includegraphics[keepaspectratio,width=\textwidth,height=0.5\textheight]{Python_logo_icon.png}
+      \end{columns}
+    
+\end{frame}
+
+% Title, image and subtitle
+\titleimage{Testing setup}{5 litre carboy with water by the window}{setup.jpg}
+
+\begin{frame}[fragile]
+    \Frametitle{Fetching the data}
+    \begin{lstlisting}[caption={MCU program loop}, label={main}]
+void main(void)
+{
+  /* Variables, external interrupts, UART init etc */
+  for(;;)
+  {
+    /* Polling for input */
+    if (uart_read_count() > 0)
+    {
+      data = uart_read();
+      if (data == 'R') {
+        ow_reset();
+        ow_temp_rd(buffer);
+        uart_send_arr(buffer, len);
+        uart_send_byte('\r');
+        uart_send_byte('\n');
+      }
+    }
+  }
+}
+    \end{lstlisting}
+\end{frame}
+
+% Title and text
+\begin{frame}[fragile]
+  \Frametitle{Daemonizing data collection}
+\begin{lstlisting}[caption={The systemd service that manages data collection}, label={systemd}]
+[Unit]
+# Human readable unit name
+Description=Reads serially from '/dev/ttyUSB*' and puts in MongoDB
+
+[Service]
+# Command that executes script
+ExecStart=/usr/bin/python /home/alarm/Project/serial_temp_to_db.py
+# Redirect print() to the Linux journal
+Environment=PYTHONUNBUFFERED=1
+# Able to notify that the service is ready
+Type=notify
+Restart=always
+
+[Install]
+# Start service at boot
+WantedBy=default.target
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \Frametitle{Accessing the journal}
+    \begin{lstlisting}[caption={Init tests logged in the journal}, label={journal}]
+~ % journalctl --user-unit=serial-temp-to-db.service
+...
+    -- Boot 492caa4c348b44e599a8070b1f5740d6 --
+Feb 21 11:49:12 alarm systemd[361]: Starting Reads serially from /dev/ttyUSB* and puts in MongoDB...
+Feb 21 11:49:59 alarm python[368]: Running tests on port: /dev/ttyUSB0
+Feb 21 11:49:59 alarm python[368]: Baud rate = 9600
+Feb 21 11:50:00 alarm python[368]: Faulty reading: 85.0000
+Feb 21 11:50:00 alarm python[368]: Faulty reading: 85.0000
+Feb 21 11:50:01 alarm python[368]: Correct reading: 19.1875
+Feb 21 11:50:01 alarm python[368]: Correct reading: 19.1875
+Feb 21 11:50:02 alarm python[368]: Correct reading: 19.1875
+Feb 21 11:50:02 alarm python[368]: Passed init tests on 3 correct readings and 2 faulty readings
+Feb 21 11:50:02 alarm systemd[361]: Started Reads serially from /dev/ttyUSB* and puts in MongoDB.
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \Frametitle{Serial data to DB}
+    \begin{lstlisting}[caption={The Python script running from systemd}, label={sertodb}]
+client = MongoClient('localhost', IP_ADR) # MongoDB
+...
+ser = serial.Serial(PORT, BAUD)          # Open serial conn to MCU
+...
+def get_temperature(temp):
+    ser.write(bytes(READ_CMD))           # Write read command
+    line = ser.readline().decode()       # Read returning data
+    if no errors and < MAX_FERM_TEMP:    # Error checking
+        temp = (float(line.strip('\x00\n\r')))
+    return temp
+
+def temp_to_db(temp):                    # Dict DB entry
+    temp_entry = {"temperature": get_temperature(temp),
+            "time": dt.utcnow()}
+    entry.insert_one(temp_entry)
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \Frametitle{DB to graph}
+    \begin{lstlisting}[caption={Getting data from DB and plotting using Plotly}, label={dbplot}]
+client = MongoClient('localhost', IP_ADR) # MongoDB
+db = client.beertemp
+
+...
+
+df = pd.DataFrame(list(db.entries.find().limit(int(LIVE_RES)).sort([('$natural',-1)]))) # Data in span from past to present
+    trace = go.Scatter( # Scatter plot
+        x=df['time'],
+        y=df['temperature'])
+...
+
+return fig
+    \end{lstlisting}
+\end{frame}
+
+
+% Full-size image
+%\fullimage{example-image}
+\begin{frame}
+  \Frametitle{Live Demo}
+\end{frame}
+
+% Title and text
+\begin{frame}
+  \Frametitle{Conclusion}
+  \begin{enumerate}
+    \item IT WORKS!
+    \item Timing issues and trash input solved
+    \item I had to read a lot in order to decide \textit{what} to choose
+    \item The workflow is very streamlined due to (magic) Python module integration
+  \end{enumerate}
+\end{frame}
+% Title and text
+\begin{frame}
+  \Frametitle{Further work and the Final Phase}
+  \begin{enumerate}
+    \item Research different methods of deploying the web app 
+    \item Design the application layout. More user interaction
+    \item Working with the higher grade specifications
+    \item Write the final report
+  \end{enumerate}
+  
+\end{frame}
+
+\end{document}
+
