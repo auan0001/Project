@@ -1,0 +1,18 @@
+\begin{lstlisting}[caption={The systemd service managing data collection}, label={systemd}]
+[Unit]
+# Human readable unit name
+Description=Reads serially from '/dev/ttyUSB*' and puts in MongoDB
+
+[Service]
+# Command that executes script
+ExecStart=/usr/bin/python /home/alarm/Project/serial_temp_to_db.py
+# Redirect print() to the Linux journal
+Environment=PYTHONUNBUFFERED=1
+# Able to notify that the service is ready
+Type=notify
+Restart=always
+
+[Install]
+# Start service at boot
+WantedBy=default.target
+\end{lstlisting}

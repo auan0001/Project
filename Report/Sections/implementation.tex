@@ -5,15 +5,22 @@
 \label{sub:overview_of_the_system}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{~/Project/Report/Images/systemimg.png}
-  \caption{TODO: Redo this image}
+  \includegraphics[width=0.6\textwidth]{example-image-a}
+  \caption{The system layout}
   \label{fig:systemimg}
 \end{figure}
 The system overview can be seen in Figure \ref{fig:systemimg}. 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{example-image-b}
+  \caption{The Arduino and DS18B20 connected through a breadboard}
+  \label{fig:breadboard}
+\end{figure}
+
+\newpage
+
 \subsection{Hardware and components}%
 \label{sub:hardware_and_components}
-% TODO add abbreviation section
-
 The software is written and compiled on a Lenovo ThinkPad P14s Gen 2 with an AMD Ryzen 7 PRO 5850U, referenced to as the \textit{workstation}.
 
 The database and web application is hosted on a Raspberry Pi 3B which has a 64-bit ARM Cortex v7 processor running Arch Linux ARM. The RPi is connected to a router and accessed locally through the SSH protocol from the workstation.
@@ -34,11 +41,12 @@ Since the AVR library uses a lot of macros, it is handy to get help from an LSP.
 
 \subsubsection{Cross-compilation}%
 \label{ssub:cross_compilation}
-In order efficiently utilize the host workstation, the Embedded-C code is cross-compiled using the AVR-GCC toolchain. Given the information of what MCU the program is going to run on, known as the target, the GCC compiler can use several levels of optimizations. This has several gains such as creating faster programs that require less space.
+In order efficiently utilize the workstation, the Embedded-C code is cross-compiled using the AVR-GCC toolchain. Given the information of what MCU model the program is going to run on, known as the target, GCC is able to compile accordingly. As with non-embedded C programs, GCC is able to optimize the code by setting the appropriate compiler flags. Optimizing the code has several gains such as creating faster programs that require less space.
 
 \lstinputlisting[language=make, label={lst:makefile}, caption={GNU Makefile for compiling and flashing the program to the MCU}]{/home/auan/Project/DS18B20_UART/Makefile}
 
 In Listing \ref{lst:makefile}, only the binary \verb|.elf| file from line 21 is flashed as a \verb|.hex| file on line 32. 
+
 \subsubsection{Org-mode}%
 \label{ssub:org_mode}
 Org-mode is a text based software written in Emacs Lisp. It is highly extensible and can be customized in order to create TODO lists, schedule meetings and write journal entries in order to document the project work.
@@ -90,6 +98,8 @@ In Table \ref{tab:bauderr}, the error rate for a Baud rate of 9600 produces is l
 
 \subsubsection{DS18B20 drivers}%
 \label{ssub:ds18b20_drivers}
+The DS18B20 digital temperature sensor is manufactured by Maxim Integrated and 
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{/home/auan/Project/Report/Images/DS18B20_schem.png}
@@ -98,15 +108,14 @@ In Table \ref{tab:bauderr}, the error rate for a Baud rate of 9600 produces is l
 \end{figure}
 \subsubsection{MongoDB}%
 \label{ssub:mongodb}
-MongoDB is an open source document database suitable for storing time-series data. This acts as the web application back-end and can also store configuration options set by the user. The database can be set up to run a daemonized process, which allows the user to get or set data whenever the host is powered on. Using the Python module PyMongo, it is possible to insert entries in a standard dictionary format.
+MongoDB is an open source document database suitable for storing time-series data. This acts as the web application back-end and can also store configuration options set by the user. The database can be set up to run a daemonized process, which allows the user to get or set data whenever the server is powered on. Using the Python module PyMongo, it is possible to insert entries using JSON formatting.
 
 \subsubsection{Systemd service}%
 \label{ssub:systemd_service}
-Many Linux distributions use the Systemd init daemon and is commonly seen during boot. While many crucial programs runs in the background by Systemd as default, it is quite straightforward to add a another service that in this case runs a Python script. Systemd has several options to restart the service on failure, start without the need to login and redirect \verb|stdout| to the OS log called the \textit{journal}. The latter simplifies tracking how often the service behaves unexpectedly during long timespans.
+Many Linux distributions use the Systemd init daemon. While many crucial programs runs in the background by Systemd as default, it is quite straightforward to add a another service that in this case runs the Python temperature reading script. Systemd has several options to restart the service on failure, start without the need to login and redirect \verb|stdout| to the OS log called the \textit{journal}. The latter simplifies tracking how often the service behaves unexpectedly during long timespans.
 
-\begin{lstlisting}[language=bash]
- TODO: Systemd service code 
-\end{lstlisting}
+\input{/home/auan/Project/Report/Listings/systemd.tex}
+
 
 \subsubsection{Plotly Dash web application}%
 \label{ssub:plotly_dash_web_application}

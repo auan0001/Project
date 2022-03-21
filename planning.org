@@ -129,9 +129,55 @@ CLOSED: [2022-02-17 Thu 16:14] DEADLINE: <2022-02-15 Tue>
 :END:
  :TAGS: :@rpi:
 
-** TODO Serial to DB daemonized
-DEADLINE: <2022-02-18 Fri>
+** DONE Serial to DB daemonized
+CLOSED: [2022-02-28 Mon 10:32] DEADLINE: <2022-02-18 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-28 Mon 10:32]
+:END:
  :TAGS: :@rpi:
+
+** TODO Final Report Draft
+DEADLINE: <2022-03-14 Mon>
+ :TAGS: :@project:
+
+** TODO Final Report
+DEADLINE: <2022-03-23 Wed>
+ :TAGS: :@project:
+
+** DONE Reschedule verbal exam
+CLOSED: [2022-03-11 Fri 15:43] DEADLINE: <2022-03-01 Tue>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-11 Fri 15:43]
+:END:
+ :TAGS: :@project:
+
+** DONE Dash date slider
+CLOSED: [2022-03-11 Fri 15:44] DEADLINE: <2022-03-06 Sun>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-11 Fri 15:44]
+:END:
+ :TAGS: :@project:
+
+** TODO Calibrate sensor
+DEADLINE: <2022-03-08 Tue>
+ :TAGS: :@avr:
+
+** TODO Figure checklist
+- [ ] Circuit in tikz
+- [ ] System flowchart
+- [ ] Fermenter with sensor 
+- [ ] Arduino port view
+- [ ] DS18B20 Pulses
+DEADLINE: <2022-03-13 Sun>
+ :TAGS: :@project:
+
+** TODO Set Baud=9600
+DEADLINE: <2022-03-15 Tue>
+ :TAGS: :@avr:
+
+** MEETING Oral Exam
+DEADLINE: <2022-03-18 Fri 16:30>
+ :TAGS: :@project:
 
 * Meetings
 
@@ -152,3 +198,10 @@ CLOSED: [2022-02-04 Fri 17:19] SCHEDULED: <2022-02-04 Fri 09:00-10:20>
 :LOGBOOK:
 - State "DONE"       from "MEETING"    [2022-02-04 Fri 17:19]
 :END:
+
+** MEETING S4
+SCHEDULED: <2022-03-16 Wed 10:00-12:00>
+ :PROPERTIES:
+ :LOCATION: Zoom
+ :END:
+

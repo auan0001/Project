@@ -3,22 +3,34 @@
 
 \subsection{Microcontroller}%
 \label{sub:microcontroller}
-Programming of the MCU is historically conducted in the processor architecture's specific assembly language. Today, many MCUs support programming in several high-level languages where Embedded-C is one of the most common. Other alternatives, such as MicroPython, is an embedded dialect of Python, but is also written in C. The Embedded-C language supports inline assembly code which is handy when the programmer wants section of code to be very specific and remain untouched by compiler optimizations.
+Programming of the MCU is historically conducted in the processor architecture's specific assembly language. Today, many MCUs support programming in several high-level languages where Embedded-C is one of the most common. Other alternatives, such as the Raspberry Pi Zero uses MicroPython which is an embedded-compatible dialect of Python. This allows for programming MCUs using the popular Python syntax wrapping around the C language. The Embedded-C language supports inline assembly code which is handy when the programmer wants section of code to be very specific and remain untouched by compiler optimizations.
 
-\subsection{Singe-board computer}%
-\label{sub:singe_board_computer}
-During the last ten years, single-board computers (SBCs) has become very powerful compared to its price tag. One of the most notable manufacturers is Raspberry Pi whose latest models uses a multiprocessing 64-bit CPU, 1GB RAM and WLAN/Bluetooth networking capabilities. It is very useful for developing systems where a general purpose computers can fit inside a robot or scattering multiple units as a data collection network. 
+% IMG
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{/home/auan/Project/Report/Images/nano.png}
+  \caption{Arduino Nano board layout}
+  \label{fig:nano}
+\end{figure}
 
-\subsection{Temperature sensor}%
-\label{sub:temperature_sensor}
-In this project, the physical mechanisms of the temperature sensor is seen as a black box (as the analog-to-digital conversion is done inside the sensor) and focuses on communicating using drivers written in Embedded-C.
+According to the Figure \ref{fig:nano}, the ATmega328p (on the Arduino Nano) has different properties for analog or digital signals depending on the pin number. The Arduino is more or less a plug-and-play device if the proper drivers are installed for the USB interface connected to the programmer.
+
+\subsection{Single-board computer}%
+\label{sub:single_board_computer}
+SBCs are a often cheap, lightweight and low-power alternative that contains many features of a PC on the system size of a debit card. One of the most notable manufacturers is Raspberry Pi whose latest models uses a multiprocessing 64-bit CPU, 1GB RAM and WLAN/Bluetooth networking capabilities. It is very useful for developing systems where a general purpose computers can fit inside a robot or scattering multiple units as a data collection network. There exists a multitude of lightweight open-source OS variants for the ARM architecture.
+
+\subsection{Digital temperature sensor}%
+\label{sub:digital_temperature_sensor}
+A digital temperature sensor is an embedded system that is able to convert an analog reading of some physical property that varies proportionally when exposed to different temperatures. As the ADC conversion is done inside the sensor, the emphasis is not on the exact physical mechanisms of the but focuses on communicating using drivers written in Embedded-C.
 
 \subsection{UART communication}%
 \label{sub:uart}
-An MCU can communicate with an SBC using the serial communication protocol UART. Depending on the application is it possible to customize the UART signal window to contain several combination of start, stop and parity bits.
+An MCU can communicate with an SBC using the serial communication protocol UART. Depending on the application, or hardware specifications, it is possible to customize the UART signal window to contain several combination of start, stop and parity bits.
 \input{/home/auan/Project/Report/Images/uartsig.tex}
 
-As seen in \ref{fig:uartsig}, the.
+As seen in \ref{fig:uartsig}, the window length is so-and-so.
+
+\newpage
 
 \subsection{Web application}%
 \label{sub:web_application}
