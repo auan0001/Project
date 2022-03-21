@@ -3,10 +3,47 @@
 
 \subsection{Background}%
 \label{sub:background}
+% See project plan
 
 \subsection{Purpose of the project}%
 \label{sub:purpose_of_the_project}
+The project aims to show that a reliable homebrew fermentation temperature logging system, with data visualization, can be created using open source software and easily accessible electronics. A list of used hardware and source code of the finished product will be published to GitHub.
 
 \subsection{Work distribution and planning}%
 \label{sub:work_distribution_and_planning}
+% GANTT
+\begin{figure}[h]
+  \centering
+  \input{/home/auan/Project/Tex/gantt.tex}
+  \caption{Gantt scheme showing the enumerated tasks during the project timespan}
+  \label{fig:gantt}
+\end{figure}
 
+The work planning and execution is done by one person with the help of a supervisor, which is also head of the course. As seen in Fig, the duration of the project was split into three phases with the enumerated tasks
+
+The time planning for the enumerated tasks is visualized as a Gantt scheme in Figure \ref{fig:gantt}.
+\begin{enumerate}
+  \item
+Set up project repository, as well as report and documentation workflow. Formulate preliminary time plan and goals. Research suitable hardware.
+  \item
+Get started with the AVR toolchain, write Makefiles and configure a development environment. Configure ARM compatible Linux on the RPi. Write UART routines and verify that the communication is working. Extend the communication to contain temperature data from the sensor.
+  \item
+    Apply a filter to the signal. Design the website, configure databases and visualization of data.
+  \item
+    Extend the website with more features. Collect or generate dummy-data in order to present a proof of concept.
+  \item Present the project, i.e all project phases, and finalize the report.
+\end{enumerate}
+
+\subsection{Grading criteria}%
+\label{sub:grading_criteria}
+The finally revised grading criteria is
+\begin{itemize}
+  \item 
+    Grade 3. The temperature is measured by the microcontroller and presented through a visualization on a website that is accessible from the internet. The website is hosted on a Raspberry Pi computer configured with an appropriate ARM compatible Linux distribution.
+  \item 
+   Grade 4. The temperature sensor signal can be processed through a filter. If a drastic temperature is detected, an automated script sends an alert through email. 
+  \item
+   Grade 5. In addition to the stated grading criteria, the data is accessed in a manner similar to an interactive process view that a production company might order as a web application. The data collection is reliable and handles unexpected errors that might affect the system.
+\end{itemize}
+
+The goals and specifications of the project is set during the beginning of the first phase but can be reformulated according to the progress. Changes to the specifications and/or grading criteria is discussed and decided by the project supervisor.

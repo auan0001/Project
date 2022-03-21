@@ -1,7 +1,54 @@
-\input{preamble.tex}
+%\input{Sections/glossary.tex}
+\input{Sections/preamble.tex}
 \begin{document}
+% TODO Remove focus from brewing to the system
+\input{Sections/abstract.tex}
+\newpage
+\tableofcontents
+\newpage
+\input{Sections/glossary.tex}
+\newpage
 \input{Sections/introduction.tex}
+\newpage
+% Take inspiration from project plan
+% Insert Gantt scheme
 \input{Sections/workingprinciple.tex}
-%\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/main.c}
-%\lstinputlisting[language=python]{~/Project/livedb.py}
+\newpage
+% Theory behind each component or API.
+% UART and bitwise communication
+% AVR
+%   Description of hardware (data directions etc)
+% DS18B20
+%   Description of hardware
+%   Driver header listings
+% RPi
+%   Description
+\input{Sections/implementation.tex}
+\newpage
+% How is each part of the sys interconnected?
+% AVR
+%   Description of drivers
+%   Driver header listings
+% DS18B20
+%   Description of drivers
+%   Driver header listings
+\input{Sections/resultdiscussion.tex}
+\newpage
+% How did it work out? Is it a finished product?
+\input{Sections/conclandfurtherwork.tex}
+\newpage
+% Optimizations? DB and data filtering alternatives.
+% Power saving
+% Redirection to internet
+
+\input{Sections/appendices.tex}
+% Code listings
+\newpage
+\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/main.c}
+\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/uart.c}
+\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/onewire.c}
+\lstinputlisting[language=c]{~/Project/DS18B20_UART/inc/uart.h}
+\lstinputlisting[language=c]{~/Project/DS18B20_UART/inc/onewire.h}
+\lstinputlisting[language=python]{~/Project/livedb.py}
+\lstinputlisting[language=python]{~/Project/serial_temp_to_db.py}
 \end{document}

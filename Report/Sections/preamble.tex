@@ -1,7 +1,8 @@
-\documentclass{report}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+\usepackage[acronym]{glossaries}
 \usepackage[english]{babel}
 \usepackage{titlesec} 
 \usepackage{import}
@@ -10,8 +11,11 @@
 \usepackage{xifthen}
 \usepackage{hyperref}
 \usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{multicol}
 \usepackage{pgfplots}
-\usepackage[margin=2cm]{geometry}
+\usepackage{pgfgantt}
+\usepackage[margin=3cm]{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
 \definecolor{commentsColor}{rgb}{0.497495, 0.497587, 0.497464}
@@ -51,4 +55,5 @@
 \pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
-\usepackage[margin=2cm]{geometry}
+\usepackage{tikz-timing}
+\usetikztiminglibrary[new={char=Q,reset char=R}]{counters}

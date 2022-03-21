@@ -1,0 +1,30 @@
+\thispagestyle{plain}
+\newgeometry{margin=5cm}
+\begin{center}
+    \Large
+    \textsc{Fermentation Temperature Monitoring}
+    \vspace{0.1cm}
+    \small \\
+    \textsc{using an Mcu and a Single-board Computer}
+        
+    \vspace{0.4cm}
+    %\small
+    %\textsc{1TE721 Project in Embedded Systems}
+    %\vspace{0.4cm} \\
+    \text{Karl August Forsman}
+    
+    %\vspace{0.4cm}
+    %\text{Supervisor: Dr. Ping Wu, Department of Signals and Systems}
+       
+    \vspace{0.9cm}
+    \textbf{Abstract}
+\end{center}
+In recent years, the number of small scale breweries has skyrocketed in numbers. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry. These systems are often equipped with sensors logging temperature and pressure. For the most common commercial beers, such as lagers, there exists optimized means of production where the temperature controls plays a big part in order to maximize yield and minimize the length of the production cycle.
+
+A traditional brewing style, often referred to as 
+\textit{farmhouse brewing}, focuses on letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) free-rise in temperature, hence not using any control systems. One historically popular option is letting it ferment in a cellar due to it's stable climate. Since the compounds produced by these microorganisms are in most cases unwanted, a lot of research has been put into detecting an excluding them from the process as part of quality control. Only a small share of the research have had the focus on producing beer using these microorganisms which makes it interesting to log the temperature dynamics of a mixed fermentation as a pre-study in order to learn how the fermentation can be controlled to get satisfactory results.
+
+The objective of this project is develop a small and portable system prototype that allows an AVR MCU to communicate with a Raspberry Pi (RPi) through serial communication. The signal should not contain any unnecessary noise and can therefor be filtered by the MCU before being transmitted to the server in a time series database.
+
+The RPi based server is accessed on the internet by the end user and can be visualized using external libraries compatible with the choice of database.
+\restoregeometry

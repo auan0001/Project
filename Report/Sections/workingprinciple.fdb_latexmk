@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1647248392 "workingprinciple.tex" "workingprinciple.pdf" "workingprinciple" 1647248392
+  "../Images/uartsig.tex" 1647248265 736 3b5aec634da6fd06f1f8d44525ac4b80 ""
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1640600964 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1641317676 2920110 44b5ecaf1870c9779885f0cdbb7a93b1 ""
+  "workingprinciple.aux" 1647248392 32 3985256e7290058c681f74d7a3565a19 ""
+  "workingprinciple.tex" 1647248383 394 74e563554b527544fd737fe7ef503226 ""
+  (generated)
+  "workingprinciple.log"
+  "workingprinciple.pdf"

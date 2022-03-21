@@ -1,0 +1,11 @@
+PWD /home/auan/Project/Report/Sections
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT workingprinciple.tex
+OUTPUT workingprinciple.log
+INPUT ../Images/uartsig.tex
+INPUT ../Images/uartsig.tex
+INPUT ../Images/uartsig.tex
+INPUT ../Images/uartsig.tex
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm

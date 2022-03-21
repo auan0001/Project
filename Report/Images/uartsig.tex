@@ -1,0 +1,24 @@
+\begin{figure}[htpb]
+  \centering
+
+  \begin{tikztimingtable}
+    [timing/d/background/.style={fill=white},
+    timing/lslope=0.2,
+    xscale=1.5,yscale=1.5]
+
+    \texttt{UART} & H [dotted] ;HLL 8{2Q} HH;H [dotted]\\
+    \extracode
+    % Add vertical lines in two colors
+
+    \begin{pgfonlayer}{background}
+      \begin{scope}[semitransparent,semithick]
+        \vertlines[dotted]{2.1,4.1,...,22.1}
+        \foreach \i [count=\col from 0] in {2.1,4.1,...,22.1}
+        \node[font=\scriptsize] at (\i,3) {$t_{\col}$};   
+      \end{scope}
+      \end{pgfonlayer}
+
+  \end{tikztimingtable}
+  \caption{The bitwise UART communication initiates using a low start bit, eight bits of data and a high stop bit.}
+  \label{fig:uartsig}
+\end{figure}

@@ -1,4 +1,36 @@
 \section{Working principle}%
 \label{sec:working_principle}
 
+\subsection{Microcontroller}%
+\label{sub:microcontroller}
+Programming of the MCU is historically conducted in the processor architecture's specific assembly language. Today, many MCUs support programming in several high-level languages where Embedded-C is one of the most common. Other alternatives, such as MicroPython, is an embedded dialect of Python, but is also written in C. The Embedded-C language supports inline assembly code which is handy when the programmer wants section of code to be very specific and remain untouched by compiler optimizations.
+
+\subsection{Singe-board computer}%
+\label{sub:singe_board_computer}
+During the last ten years, single-board computers (SBCs) has become very powerful compared to its price tag. One of the most notable manufacturers is Raspberry Pi whose latest models uses a multiprocessing 64-bit CPU, 1GB RAM and WLAN/Bluetooth networking capabilities. It is very useful for developing systems where a general purpose computers can fit inside a robot or scattering multiple units as a data collection network. 
+
+\subsection{Temperature sensor}%
+\label{sub:temperature_sensor}
+In this project, the physical mechanisms of the temperature sensor is seen as a black box (as the analog-to-digital conversion is done inside the sensor) and focuses on communicating using drivers written in Embedded-C.
+
+\subsection{UART communication}%
+\label{sub:uart}
+An MCU can communicate with an SBC using the serial communication protocol UART. Depending on the application is it possible to customize the UART signal window to contain several combination of start, stop and parity bits.
+\input{/home/auan/Project/Report/Images/uartsig.tex}
+
+As seen in \ref{fig:uartsig}, the.
+
+\subsection{Web application}%
+\label{sub:web_application}
+A common way of constructing the front-end usually consists of 
+\begin{enumerate}
+  \item HTML -- constructing the web page document structure. A very simple text-based website can be constructed only using HTML. The page is then interpreted depending on the user's system defaults.
+  \item CSS -- each element in the HTML document can either be styled individually or globally by defining a style-sheet. This handles elementary attributes such as colours, fonts, spacing and padding.  
+  \item Scripting -- in order to perform work that handles computation of variables and automated tasks, it is often executed by some kind of script language. A common language for this purpose is JavaScript, or any of its super-sets such as TypeScript. This can also include calls to advanced APIs in order to for example get, process or present data in a certain way.
+
+\end{enumerate}
+By using scripts, that can handle real-time information from the user and web browser, it is possible to create highly dynamic web pages that graphically scales well to both stationary and mobile devices.
+An example of an open-source project that handles cross-platforms well is Bootstrap, maintained by Twitter. Bootstrap is used both by major companies and hobbyists.
+
+When managing the back-end of a web application, it is important to choose a suitable database that is both compatible with the eventual APIs as well as the type of data it is containing. 
 

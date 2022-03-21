@@ -1,4 +1,15 @@
 \section{Conclusions and futher work}%
 \label{sec:conclusions_and_futher_work}
 
+The system provides a user-friendly front end where the data can be visualized, accessed and monitored through custom settings. 
 
+\subsection{Improvements}%
+\label{sub:improvements}
+For a three year time-series sampled every hour it results in 26280 data points. When using a large sampling window, the \verb|savgol| filter is quite intensive to compute for the RPi.
+
+\begin{enumerate}
+ \item Pre-processing the data through a filter on the MCU is more efficient compared to post-processing larger parts on the dataset while also running the web application.
+ \item If the data is filtered by the RPi, the trace is toggled by the user and only computed when chosen. When filtering a large time-series, the user should be able to set the use choose a dynamic window size.
+ \item Since the MCU only polls for an input every hour it could be possible to implement a rule to let the Linux kernel power the USB connecting to the MCU shortly before asking for a measurement.
+ \item The server can be deployed to be accessed through the internet and lets the user remotely monitor the temperature in real time. This was not investigated due to security issues.
+\end{enumerate}

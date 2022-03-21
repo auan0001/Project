@@ -1,4 +1,10 @@
 \section{Result and discussions}%
 \label{sec:result_and_discussions}
 
+%Since the data is accessed through a datetime formatted key, it is.
+The resulting product is an open-source temperature monitoring system suitable for beer fermentation. Users of the web application can filter through time-series data by filtering the start and end date using callback functions communicating with the database. In order to set an alarm level for detecting a temperature drop, these callback functions are also used to write a non-volatile setting to the database. This is helping the brewer to avoid oxidation through the airlock caused by back pressure.
+Standard features provided by the Plotly library lets the user zoom and mouse-hover above the data points in order to receive immediate information about the temperature reading. 
+
+Viewing the unfiltered data points gives an overall view of the temperature fluctuations during longer timespans. When viewing in smaller time windows, the signal is in need of filtering by the MCU to reduce noise and provide a smoother curve.
+
 

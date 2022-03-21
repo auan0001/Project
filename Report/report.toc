@@ -1,0 +1,31 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Background}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Purpose of the project}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Work distribution and planning}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Grading criteria}{4}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Working principle}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Microcontroller}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Singe-board computer}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Temperature sensor}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}UART communication}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Web application}{6}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Implementation}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Overview of the system}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Hardware and components}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Software and development tools}{8}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Neovim}{8}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Cross-compilation}{9}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Org-mode}{10}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}AVR-GCC Toolchain}{10}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Git}{10}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Vimtex}{10}{subsubsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.4}Implementation}{10}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}UART drivers}{10}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}DS18B20 drivers}{11}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}MongoDB}{11}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Systemd service}{11}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}Plotly Dash web application}{12}{subsubsection.3.4.5}%
+\contentsline {section}{\numberline {4}Result and discussions}{13}{section.4}%
+\contentsline {section}{\numberline {5}Conclusions and futher work}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Improvements}{14}{subsection.5.1}%
