@@ -1,0 +1,34 @@
+\begin{lstlisting}[language=python, caption={Pseudocode showing the structure of a Plotly Dash app}, label={lst:dash}]
+  import dash dependencies
+  import modules
+
+  external_stylesheets = ['stylesheet.css']
+  
+  app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+  # The application layout
+  app.layout = html.Div(children =[
+      html.H1('Large Heading'),
+      html.H3('Smaller Heading'),
+      html.Div([
+          dcc.Graph(id='graph-id', animate=False),
+          dcc.Interval(
+              id='interval-component',
+              interval=1*UPDATE_INTERVAL
+              )
+          ])
+      )
+
+# Callback function decoration
+@app.callback(
+    Output("update-figure", "figure"),
+    Input("interval-component", "n_intervals"),
+)
+
+# Figure manipulation
+def update_figure():
+  return figure
+
+if __name__ == '__main__':
+    app.run_server(debug=True, host="0.0.0.0")
+\end{lstlisting}

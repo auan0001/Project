@@ -1,0 +1,263 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{PinoutNANO}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Pinout-{{NANOevery}}\_latest.Png ({{PNG Image}}, 2571~\texttimes ~2572 Pixels) —{} {{Scaled}} (36\%)}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/BCHMTJNR/Pinout-NANOevery_latest.html
+      \endverb
+      \verb{urlraw}
+      \verb https://content.arduino.cc/assets/Pinout-NANOevery_latest.png
+      \endverb
+      \verb{url}
+      \verb https://content.arduino.cc/assets/Pinout-NANOevery_latest.png
+      \endverb
+    \endentry
+    \entry{trevennorPracticalAVRMicrocontrollers2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=125a03e079636adff97c7cff081d4c65}{%
+           family={Trevennor},
+           familyi={T\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{125a03e079636adff97c7cff081d4c65}
+      \strng{fullhash}{125a03e079636adff97c7cff081d4c65}
+      \strng{bibnamehash}{125a03e079636adff97c7cff081d4c65}
+      \strng{authorbibnamehash}{125a03e079636adff97c7cff081d4c65}
+      \strng{authornamehash}{125a03e079636adff97c7cff081d4c65}
+      \strng{authorfullhash}{125a03e079636adff97c7cff081d4c65}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In Practical AVR Microcontrollers, you'll learn how to use the AVR microcontroller to make your own nifty projects and gadgets. You'll start off with the basics in part one: setting up your development environment and learning how the "naked" AVR differs from the Arduino. Then you'll gain experience by building a few simple gizmos and learning how everything can be interconnected. In part two, we really get into the goodies: projects! Each project will show you exactly what software and hardware you need, and will provide enough detail that you can adapt it to your own needs and parts availability. Some of the projects you'll make: An illuminated secret panel A hallway lighting system with a waterfall effect A crazy lightshow Visual effects gizmos like a Moire wheel and shadow puppets In addition, you'll design and implement some home automation projects, including working with wired and wireless setups. Along the way, you'll design a useable home automation protocol and look at a variety of hardware setups. Whether you're new to electronics, or you just want to see what you can do with an AVR outside of an Arduino, Practical AVR Microcontrollers is the book for you.}
+      \field{day}{27}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-1-4302-4447-9}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{pagetotal}{400}
+      \field{shorttitle}{Practical {{AVR Microcontrollers}}}
+      \field{title}{Practical {{AVR Microcontrollers}}: {{Games}}, {{Gadgets}}, and {{Home Automation}} with the {{Microcontroller Used}} in the {{Arduino}}}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb lKSQQtLj1l0C
+      \endverb
+      \keyw{Computers / Hardware / General}
+    \endentry
+    \entry{RaspberryPiArch}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Raspberry {{Pi}} 3 | {{Arch Linux ARM}}}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/V4X7LUS5/raspberry-pi-3.html
+      \endverb
+      \verb{urlraw}
+      \verb https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
+      \endverb
+      \verb{url}
+      \verb https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
+      \endverb
+    \endentry
+    \entry{GCCCompilersAVR}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GCC Compilers}} for {{AVR}}®{} and {{Arm}}®-{{Based MCUs}} and {{MPUs}} | {{Microchip Technology}}}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/62VUC364/gcc-compilers.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers
+      \endverb
+      \verb{url}
+      \verb https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers
+      \endverb
+    \endentry
+    \entry{git}{software}{}
+      \list{organization}{1}{%
+        {Git}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Git Source Code Mirror - This is a publish-only repository but pull requests can be turned into patches to the mailing list via GitGitGadget (https://gitgitgadget.github.io/). Please follow Documentation/SubmittingPatches procedure for any of your improvements.}
+      \field{day}{22}
+      \field{hour}{12}
+      \field{minute}{54}
+      \field{month}{3}
+      \field{origday}{23}
+      \field{orighour}{14}
+      \field{origminute}{21}
+      \field{origmonth}{7}
+      \field{origsecond}{26}
+      \field{origtimezone}{Z}
+      \field{origyear}{2008}
+      \field{second}{36}
+      \field{timezone}{Z}
+      \field{title}{Git - Fast, Scalable, Distributed Revision Control System}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/git/git
+      \endverb
+      \verb{url}
+      \verb https://github.com/git/git
+      \endverb
+      \keyw{c,hacktoberfest,shell}
+    \endentry
+    \entry{lervagVimTeX2022}{software}{}
+      \name{author}{1}{}{%
+        {{hash=76a6653781ce6076ce802abcbc9c1fc5}{%
+           family={Lervåg},
+           familyi={L\bibinitperiod},
+           given={Karl\bibnamedelima Yngve},
+           giveni={K\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \strng{fullhash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \strng{bibnamehash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \strng{authorbibnamehash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \strng{authornamehash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \strng{authorfullhash}{76a6653781ce6076ce802abcbc9c1fc5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{VimTeX: A modern Vim and neovim filetype plugin for LaTeX files.}
+      \field{day}{22}
+      \field{hour}{1}
+      \field{minute}{50}
+      \field{month}{3}
+      \field{origday}{5}
+      \field{orighour}{11}
+      \field{origminute}{55}
+      \field{origmonth}{10}
+      \field{origsecond}{11}
+      \field{origtimezone}{Z}
+      \field{origyear}{2013}
+      \field{second}{47}
+      \field{timezone}{Z}
+      \field{title}{{{VimTeX}}}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{origdateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/lervag/vimtex
+      \endverb
+      \verb{url}
+      \verb https://github.com/lervag/vimtex
+      \endverb
+      \keyw{filetype-plugin,latex,neovim,tex,vim,vim-plugin,vimtex}
+    \endentry
+    \entry{atmega328p}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44ca33799bc2714094309178874ed121}{%
+           family={{Atmel Corporation}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{44ca33799bc2714094309178874ed121}
+      \strng{fullhash}{44ca33799bc2714094309178874ed121}
+      \strng{bibnamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authorbibnamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authornamehash}{44ca33799bc2714094309178874ed121}
+      \strng{authorfullhash}{44ca33799bc2714094309178874ed121}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{ATmega328p}} Datasheet}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P<sub>D</sub>atasheet.pdf
+      \endverb
+      \verb{url}
+      \verb https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P%3Csub%3ED%3C/sub%3Eatasheet.pdf
+      \endverb
+    \endentry
+    \entry{DS18B20ProgrammableResolution}{article}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{{{DS18B20}} - {{Programmable Resolution}} 1-{{Wire Digital Thermometer}}}
+      \field{pages}{20}
+      \range{pages}{1}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/WKCZGI5H/DS18B20 - Programmable Resolution 1-Wire Digital T.pdf
+      \endverb
+    \endentry
+    \entry{PyMongo}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{{{PyMongo}} 4.0.2 {{Documentation}} —{} {{PyMongo}} 4.0.2 Documentation}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/WIX9BAQV/index.html
+      \endverb
+      \verb{urlraw}
+      \verb https://pymongo.readthedocs.io/en/stable/index.html
+      \endverb
+      \verb{url}
+      \verb https://pymongo.readthedocs.io/en/stable/index.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

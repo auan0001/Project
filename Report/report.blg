@@ -1,0 +1,14 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'report.blg'
+[41] biber:340> INFO - === Tue Mar 22, 2022, 18:37:07
+[49] Biber.pm:415> INFO - Reading 'report.bcf'
+[87] Biber.pm:952> INFO - Found 9 citekeys in bib section 0
+[95] Biber.pm:4340> INFO - Processing section 0
+[101] Biber.pm:4531> INFO - Looking for bibtex format file '/home/auan/testbib.bib' for section 0
+[102] bibtex.pm:1689> INFO - LaTeX decoding ...
+[108] bibtex.pm:1494> INFO - Found BibTeX data source '/home/auan/testbib.bib'
+[148] UCollate.pm:68> INFO - Overriding locale 'se_EN' defaults 'variable = shifted' with 'variable = non-ignorable'
+[148] UCollate.pm:68> INFO - Overriding locale 'se_EN' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[148] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'se_EN'
+[153] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[155] bbl.pm:757> INFO - Output to report.bbl

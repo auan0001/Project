@@ -1,5 +1,6 @@
 %\input{Sections/glossary.tex}
 \input{Sections/preamble.tex}
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
 \begin{document}
 % TODO Remove focus from brewing to the system
 \input{Sections/abstract.tex}
@@ -44,11 +45,13 @@
 \input{Sections/appendices.tex}
 % Code listings
 \newpage
-\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/main.c}
-\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/uart.c}
-\lstinputlisting[language=c]{~/Project/DS18B20_UART/src/onewire.c}
-\lstinputlisting[language=c]{~/Project/DS18B20_UART/inc/uart.h}
-\lstinputlisting[language=c]{~/Project/DS18B20_UART/inc/onewire.h}
-\lstinputlisting[language=python]{~/Project/livedb.py}
-\lstinputlisting[language=python]{~/Project/serial_temp_to_db.py}
+\printbibliography
+\newpage
+\mylisting[language=c]{~/Project/DS18B20_UART/src/main.c}
+\mylisting[language=c]{~/Project/DS18B20_UART/src/uart.c}
+\mylisting[language=c]{~/Project/DS18B20_UART/src/onewire.c}
+\mylisting[language=c]{~/Project/DS18B20_UART/inc/uart.h}
+\mylisting[language=c]{~/Project/DS18B20_UART/inc/onewire.h}
+\mylisting[language=python]{~/Project/livedb.py}
+\mylisting[language=python]{~/Project/serial_temp_to_db.py}
 \end{document}

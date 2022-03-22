@@ -3,16 +3,38 @@
 
 \subsection{Overview of the system}%
 \label{sub:overview_of_the_system}
+
+
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{example-image-a}
-  \caption{The system layout}
-  \label{fig:systemimg}
+     \centering
+     \begin{subfigure}[h]{0.49\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{/home/auan/Project/Report/Images/part_overview.jpg}
+         \caption{System overview}
+         \label{fig:partsys}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[h]{0.41\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{/home/auan/Project/Report/Images/full_overview.jpg}
+         \caption{Submerged sensor}
+         \label{fig:fullsys}
+     \end{subfigure}
+        \caption{The interconnected devices forms the monitoring system. As a safety precaution, the sensor is encapsulated in a food grade tube.}
+        \label{fig:three graphs}
 \end{figure}
-The system overview can be seen in Figure \ref{fig:systemimg}. 
+
+
+%\begin{figure}[h]
+  %\centering
+  %\includegraphics[width=0.6\textwidth]{/home/auan/Project/Report/Images/part_overview.jpg}
+  %\caption{The system layout}
+  %\label{fig:systemimg}
+%\end{figure}
+%The system overview can be seen in Figure \ref{fig:systemimg}. 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{example-image-b}
+  \includegraphics[width=0.6\textwidth]{/home/auan/Project/Report/Images/schematic.jpg}
   \caption{The Arduino and DS18B20 connected through a breadboard}
   \label{fig:breadboard}
 \end{figure}
@@ -21,9 +43,9 @@ The system overview can be seen in Figure \ref{fig:systemimg}.
 
 \subsection{Hardware and components}%
 \label{sub:hardware_and_components}
-The software is written and compiled on a Lenovo ThinkPad P14s Gen 2 with an AMD Ryzen 7 PRO 5850U, referenced to as the \textit{workstation}.
+The software is written and compiled on a workstation grade Lenovo ThinkPad P14s Gen 2 with an AMD Ryzen 7 PRO 5850U.
 
-The database and web application is hosted on a Raspberry Pi 3B which has a 64-bit ARM Cortex v7 processor running Arch Linux ARM. The RPi is connected to a router and accessed locally through the SSH protocol from the workstation.
+The database and web application is hosted on a Raspberry Pi 3B which has a 64-bit ARM Cortex v8 processor running Arch Linux ARM \cite{RaspberryPiArch}. The RPi is connected to a router and accessed locally through the SSH protocol from the workstation.
 
 The MCU is an Arduino Nano board based on the 32-bit ATmega328p microprocessor. It has an on-board serial to USB interface which is connected through a USB cable. This connection provides the binary files when flashing, UART data transfer as well as supplying 5V power for driving the board.
 
@@ -33,7 +55,7 @@ A DS18B20 temperature sensor is connected to the MCU through a breadboard. The r
 \label{sub:software_and_development_tools}
 \subsubsection{Neovim}%
 \label{ssub:neovim}
-Since Neovim is completely terminal based, it is possible to clone the configuration file (\verb|.init.vim|, often called a \textit{dotfile}) to the RPi and remotelly access an IDE-like text editor without forwarding any graphics through the SSH connection.
+Neovim is completely terminal based and it is possible to clone the configuration file (\verb|.init.vim|, often called a \textit{dotfile}) to the RPi and remotely access an IDE-like text editor without forwarding any graphics through the SSH connection.
 
 Since the AVR library uses a lot of macros, it is handy to get help from an LSP. Neovim has built in LSP support and while the programmer might not use the \verb|clang| compiler for the actual compilation, it can be used with the \verb|ccls| language server.
 
@@ -53,29 +75,28 @@ Org-mode is a text based software written in Emacs Lisp. It is highly extensible
 
 \subsubsection{AVR-GCC Toolchain}%
 \label{ssub:avr_gcc_toolchain}
-The code is compiled and uploaded to the MCU using a technique known as \textit{cross compilation} which utilizes the speed of a workspace computer in order to compile and upload the binary \verb|.hex| file. Compilation commands provided by the AVR-GCC toolchain is called from a GNU Makefile which also handles hardware specific parameters such as CPU clock frequency, Baud rate and optimizer flags. 
+The code is compiled and uploaded to the MCU using a technique known as \textit{cross compilation} which utilizes the speed of a workspace computer in order to compile and upload the binary \verb|.hex| file. Compilation commands provided by the AVR-GCC toolchain \cite{GCCCompilersAVR} is called from a GNU Makefile which also handles hardware specific parameters such as CPU clock frequency, Baud rate and optimizer flags. 
 
 \subsubsection{Git}%
 \label{ssub:git}
-Git, described by its man-page as \textit{the stupid content tracker} is a versioning tool originally created by Linus Torvalds when developing the Linux operating system. The whole project is stored locally within a git repository and hosted remotely by GitHub in order to synchronize the work between the Raspbery Pi and the workstation.
-
-\subsubsection{Vimtex}%
+Git, described by its man-page as \textit{the stupid content tracker} is a versioning tool originally created by Linus Torvalds \cite{git} when developing the Linux operating system. The whole project is stored locally within a git repository and hosted remotely by GitHub in order to synchronize the work between the Raspbery Pi and the workstation.
+\subsubsection{VimTeX}%
 \label{ssub:vimtex}
-The report is written in \LaTeX and compiled using the Neovim Vimtex plug-in.
+The report is written in \LaTeX and compiled using the Neovim VimTeX plug-in \cite{lervagVimTeX2022}.
 
 \subsection{Implementation}%
 \label{sub:implementation}
 
 \subsubsection{UART drivers}%
 \label{ssub:uart_drivers}
-Calculating the correct register values, given the Baud rate, can be done directly from the file \verb|setbaud.h|. The byte-wise transfer and receive registers are also activated according to the datasheet.
-\begin{lstlisting}
+Calculating the correct register values, given the Baud rate, can be done directly from the file \verb|setbaud.h|. To enable the communication, the external interrupts, \verb|SEI()|, must be set in the C program. In Listing \ref{lst:uartreg} below
+\begin{lstlisting}[caption={Enabling UART on the ATmega328p}, label={lst:uartreg}]
 UBRR0H = UBRRH_VALUE;
 UBRR0L = UBRUBRR0L = UBRRL_VALUE;
 
 UCSR0B = (1 << RXEN0) | (1 << TXEN0) | (1 << RXCIE0) | (1 << TXCIE0);
 \end{lstlisting}
-where  
+the transfer and receive registers are also activated according to the ATmega328p datasheet \cite{atmega328p} where  
 \begin{equation}
   UBRR = \frac{f_{osc}}{16\cdot BAUD} -1.
 \end{equation}
@@ -98,7 +119,10 @@ In Table \ref{tab:bauderr}, the error rate for a Baud rate of 9600 produces is l
 
 \subsubsection{DS18B20 drivers}%
 \label{ssub:ds18b20_drivers}
-The DS18B20 digital temperature sensor is manufactured by Maxim Integrated and 
+The DS18B20 digital temperature sensor is manufactured by Maxim Integrated and the drivers used are based on Martin Thomas' modifications of Peter Dannegger's work on implementing the 1-wire library. 
+\lstinputlisting[firstline=55,lastline=64, caption={The hex code instructions for the DS18B20 sensor defined as macros in \texttt{onewire.h}}, label={lst:onewire}]{~/Project/DS18B20_UART/inc/onewire.h}
+
+While Maxim Integrated does not provide or support driver source code, it is possible to write them from reading guides on how to interface the hardware \cite{DS18B20ProgrammableResolution}. The 1-Wire protocol has, as the name suggests, one data wire for receiving instructions defined in Listing \ref{lst:onewire} and transferring the requested data.
 
 \begin{figure}[h]
   \centering
@@ -108,14 +132,13 @@ The DS18B20 digital temperature sensor is manufactured by Maxim Integrated and
 \end{figure}
 \subsubsection{MongoDB}%
 \label{ssub:mongodb}
-MongoDB is an open source document database suitable for storing time-series data. This acts as the web application back-end and can also store configuration options set by the user. The database can be set up to run a daemonized process, which allows the user to get or set data whenever the server is powered on. Using the Python module PyMongo, it is possible to insert entries using JSON formatting.
+MongoDB is an open source document database suitable for storing time-series data. This acts as the web application back-end and can also store configuration options set by the user. The database can be set up to run a daemonized process, which allows the user to get or set data whenever the server is powered on. Using the Python module PyMongo \cite{PyMongo}, it is possible to insert entries using JSON formatting.
 
 \subsubsection{Systemd service}%
 \label{ssub:systemd_service}
 Many Linux distributions use the Systemd init daemon. While many crucial programs runs in the background by Systemd as default, it is quite straightforward to add a another service that in this case runs the Python temperature reading script. Systemd has several options to restart the service on failure, start without the need to login and redirect \verb|stdout| to the OS log called the \textit{journal}. The latter simplifies tracking how often the service behaves unexpectedly during long timespans.
 
 \input{/home/auan/Project/Report/Listings/systemd.tex}
-
 
 \subsubsection{Plotly Dash web application}%
 \label{ssub:plotly_dash_web_application}
@@ -128,8 +151,6 @@ The web application consists of
 
 Dash is an open source data visualization framework that runs in a web application. It is maintained by Plotly and build upon using their graphing software with the same name.
 
-Each website object can be decorated with a callback function that either updates due to a time interval or through user interaction.
+\input{/home/auan/Project/Report/Listings/dashmain.tex}
 
-In order to utilize the power of Pandas, the data is loaded into a dataframe which allows many types of manipulation in areas such as statistics and signal processing.
-
-Since the data ordered by a timestamp, it is sorted in natural order and the start and stop date can be chosen by the user.
+Each website object can be decorated with a callback function that either updates due to a time interval or through user interaction. In the example Listing \ref{lst:dash}, the graph is updated using a timer interval but can be changed to text fields or interactive clickable elements. Since Dash is well documented for using Pandas, the data is loaded into a dataframe which allows many types of manipulation in areas such as statistics and signal processing. Since the data ordered by a timestamp, it is sorted in natural order and the start and stop date can be chosen by the using a datepicker.

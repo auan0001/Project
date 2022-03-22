@@ -9,7 +9,7 @@ Programming of the MCU is historically conducted in the processor architecture's
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{/home/auan/Project/Report/Images/nano.png}
-  \caption{Arduino Nano board layout}
+  \caption{Arduino Nano board layout \cite{PinoutNANO}}
   \label{fig:nano}
 \end{figure}
 
@@ -25,12 +25,10 @@ A digital temperature sensor is an embedded system that is able to convert an an
 
 \subsection{UART communication}%
 \label{sub:uart}
-An MCU can communicate with an SBC using the serial communication protocol UART. Depending on the application, or hardware specifications, it is possible to customize the UART signal window to contain several combination of start, stop and parity bits.
+An MCU can communicate with an SBC using the serial communication protocol UART \cite{trevennorPracticalAVRMicrocontrollers2012}. Depending on the application, or hardware specifications, it is possible to customize the UART signal window to contain several combination of start, stop and parity bits.
 \input{/home/auan/Project/Report/Images/uartsig.tex}
 
-As seen in \ref{fig:uartsig}, the window length is so-and-so.
-
-\newpage
+As seen in \ref{fig:uartsig}, this example consists of a low start bit, eight data bits and a high stop bit.
 
 \subsection{Web application}%
 \label{sub:web_application}
@@ -42,7 +40,5 @@ A common way of constructing the front-end usually consists of
 
 \end{enumerate}
 By using scripts, that can handle real-time information from the user and web browser, it is possible to create highly dynamic web pages that graphically scales well to both stationary and mobile devices.
-An example of an open-source project that handles cross-platforms well is Bootstrap, maintained by Twitter. Bootstrap is used both by major companies and hobbyists.
-
-When managing the back-end of a web application, it is important to choose a suitable database that is both compatible with the eventual APIs as well as the type of data it is containing. 
+%When managing the back-end of a web application, it is important to choose a suitable database that is both compatible with the eventual APIs as well as the type of data it is containing. 
 

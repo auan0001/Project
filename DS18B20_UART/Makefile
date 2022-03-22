@@ -1,5 +1,3 @@
-# Makefile for ATmega328p written by August Forsman
-
 FILENAME		= main
 HEADER1			= onewire
 HEADER2			= uart

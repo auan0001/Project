@@ -3,11 +3,16 @@
 
 \subsection{Background}%
 \label{sub:background}
-% See project plan
+In recent years, the number of small scale breweries has increased both among advanced hobbyists as well as commercially. This has led to an increased demand of advanced brewing systems operating on much smaller volumes compared to the macro-scale brewing industry. These systems are often equipped with sensors logging temperature and pressure. For the most common commercial beers, such as lagers, there exists optimized means of production where the temperature controls plays a big part in order to maximize yield and minimize the length of the production cycle.
+
+A traditional brewing style, often referred to as \textit{farmhouse brewing}, focuses on letting a mixed flora of yeasts and bacteria (commonly Brettanomyces, Pediococcus, Lactobacillus) free-rise in temperature, hence not using any control systems. One historically popular option is letting it ferment in a cellar due to it's stable climate. Since the compounds produced by these microorganisms are in most cases unwanted, a lot of research has been put into detecting an excluding them from the process as part of quality control. Only a small share of the research have had the focus on producing beer using these microorganisms which makes it interesting to log the temperature dynamics of a mixed fermentation as a pre-study in order to learn how the fermentation can be controlled to get satisfactory results.
+
 
 \subsection{Purpose of the project}%
 \label{sub:purpose_of_the_project}
-The project aims to show that a reliable homebrew fermentation temperature logging system, with data visualization, can be created using open source software and easily accessible electronics. A list of used hardware and source code of the finished product will be published to GitHub.
+The project aims to show that a reliable homebrew fermentation temperature logging system, with data visualization, can be created using open source software and easily accessible electronics. A list of used hardware and source code of the finished product will be published to GitHub. The objective of this project is to develop a small and portable system prototype that allows an AVR based MCU to communicate with an RPi SBC through serial communication.
+
+The RPi based server is accessed on the internet by the end user and can be visualized using external libraries compatible with the choice of database.
 
 \subsection{Work distribution and planning}%
 \label{sub:work_distribution_and_planning}

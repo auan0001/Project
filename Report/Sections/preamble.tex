@@ -11,13 +11,23 @@
 \usepackage{xifthen}
 \usepackage{hyperref}
 \usepackage{tikz}
+\usetikzlibrary{shapes, arrows}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{pgfplots}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{pgfgantt}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{equation}{section}
+\counterwithin{table}{section}
 \usepackage[margin=3cm]{geometry}
 \usepackage{listings}
+\newcommand{\mylisting}[2][]{%
+    \lstinputlisting[caption={\texttt{\detokenize{#2}}},#1]{#2}%
+}
 \usepackage{xcolor}
 \definecolor{commentsColor}{rgb}{0.497495, 0.497587, 0.497464}
 \definecolor{keywordsColor}{rgb}{0.000000, 0.000000, 0.635294}
@@ -58,3 +68,15 @@
 \usepackage{transparent}
 \usepackage{tikz-timing}
 \usetikztiminglibrary[new={char=Q,reset char=R}]{counters}
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sortlocale=se_EN,
+    natbib=true,
+    url=true, 
+    urldate=comp, 
+    doi=true,
+    eprint=false
+]{biblatex}
+\usepackage{csquotes}
+\addbibresource{/home/auan/testbib.bib}

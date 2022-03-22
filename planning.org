@@ -118,8 +118,11 @@ CLOSED: [2022-02-15 Tue 23:00] DEADLINE: <2022-02-11 Fri>
 :END:
  :TAGS: :@rpi:
 
-** TODO Flask daemonized
-DEADLINE: <2022-02-11 Fri>
+** CANC Flask daemonized
+CLOSED: [2022-03-21 Mon 13:19] DEADLINE: <2022-02-11 Fri>
+:LOGBOOK:
+- State "CANC"       from "TODO"       [2022-03-21 Mon 13:19]
+:END:
  :TAGS: :@rpi:
 
 ** DONE Dash app real live data
@@ -136,8 +139,11 @@ CLOSED: [2022-02-28 Mon 10:32] DEADLINE: <2022-02-18 Fri>
 :END:
  :TAGS: :@rpi:
 
-** TODO Final Report Draft
-DEADLINE: <2022-03-14 Mon>
+** DONE Final Report Draft
+CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-14 Mon>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-21 Mon 13:18]
+:END:
  :TAGS: :@project:
 
 ** TODO Final Report
@@ -158,8 +164,11 @@ CLOSED: [2022-03-11 Fri 15:44] DEADLINE: <2022-03-06 Sun>
 :END:
  :TAGS: :@project:
 
-** TODO Calibrate sensor
-DEADLINE: <2022-03-08 Tue>
+** DONE Calibrate sensor
+CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-08 Tue>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-21 Mon 13:18]
+:END:
  :TAGS: :@avr:
 
 ** TODO Figure checklist
@@ -171,12 +180,22 @@ DEADLINE: <2022-03-08 Tue>
 DEADLINE: <2022-03-13 Sun>
  :TAGS: :@project:
 
-** TODO Set Baud=9600
-DEADLINE: <2022-03-15 Tue>
+** DONE Set Baud=9600
+CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-15 Tue>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-21 Mon 13:18]
+:END:
  :TAGS: :@avr:
 
-** MEETING Oral Exam
-DEADLINE: <2022-03-18 Fri 16:30>
+** DONE Oral Exam
+CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-18 Fri 16:30>
+:LOGBOOK:
+- State "DONE"       from "MEETING"    [2022-03-21 Mon 13:18]
+:END:
+ :TAGS: :@project:
+
+** TODO API in report
+DEADLINE: <2022-03-23 Wed>
  :TAGS: :@project:
 
 * Meetings
@@ -199,9 +218,12 @@ CLOSED: [2022-02-04 Fri 17:19] SCHEDULED: <2022-02-04 Fri 09:00-10:20>
 - State "DONE"       from "MEETING"    [2022-02-04 Fri 17:19]
 :END:
 
-** MEETING S4
-SCHEDULED: <2022-03-16 Wed 10:00-12:00>
+** DONE S4
+CLOSED: [2022-03-21 Mon 13:18] SCHEDULED: <2022-03-16 Wed 10:00-12:00>
  :PROPERTIES:
  :LOCATION: Zoom
  :END:
+:LOGBOOK:
+- State "DONE"       from "MEETING"    [2022-03-21 Mon 13:18]
+:END:
 
