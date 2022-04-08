@@ -19,9 +19,56 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{PinoutNANO}{online}{}
+    \entry{MixedFermentation}{online}{}
+      \list{organization}{1}{%
+        {Milk The Funk Wiki}%
+      }
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Mixed {{Fermentation}}}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/9G4XTMQY/Mixed_Fermentation.html
+      \endverb
+      \verb{urlraw}
+      \verb http://www.milkthefunk.com/wiki/Mixed_Fermentation
+      \endverb
+      \verb{url}
+      \verb http://www.milkthefunk.com/wiki/Mixed_Fermentation
+      \endverb
+    \endentry
+    \entry{MicroPython}{online}{}
+      \list{organization}{1}{%
+        {GitHub}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The MicroPython project. MicroPython has 14 repositories available. Follow their code on GitHub.}
+      \field{langid}{english}
+      \field{title}{{{MicroPython}}}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/4ZUGBNCL/micropython.html
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/micropython
+      \endverb
+      \verb{url}
+      \verb https://github.com/micropython
+      \endverb
+    \endentry
+    \entry{PinoutNANO}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Pinout-{{NANOevery}}\_latest.Png ({{PNG Image}}, 2571~\texttimes ~2572 Pixels) —{} {{Scaled}} (36\%)}
       \field{urlday}{22}
@@ -55,8 +102,8 @@
       \strng{authorbibnamehash}{125a03e079636adff97c7cff081d4c65}
       \strng{authornamehash}{125a03e079636adff97c7cff081d4c65}
       \strng{authorfullhash}{125a03e079636adff97c7cff081d4c65}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In Practical AVR Microcontrollers, you'll learn how to use the AVR microcontroller to make your own nifty projects and gadgets. You'll start off with the basics in part one: setting up your development environment and learning how the "naked" AVR differs from the Arduino. Then you'll gain experience by building a few simple gizmos and learning how everything can be interconnected. In part two, we really get into the goodies: projects! Each project will show you exactly what software and hardware you need, and will provide enough detail that you can adapt it to your own needs and parts availability. Some of the projects you'll make: An illuminated secret panel A hallway lighting system with a waterfall effect A crazy lightshow Visual effects gizmos like a Moire wheel and shadow puppets In addition, you'll design and implement some home automation projects, including working with wired and wireless setups. Along the way, you'll design a useable home automation protocol and look at a variety of hardware setups. Whether you're new to electronics, or you just want to see what you can do with an AVR outside of an Arduino, Practical AVR Microcontrollers is the book for you.}
@@ -76,8 +123,8 @@
       \keyw{Computers / Hardware / General}
     \endentry
     \entry{RaspberryPiArch}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Raspberry {{Pi}} 3 | {{Arch Linux ARM}}}
       \field{urlday}{22}
@@ -94,9 +141,49 @@
       \verb https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
       \endverb
     \endentry
+    \entry{DocumentationNeovim}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Documentation - {{Neovim}}}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/VK9KAGYL/general.html
+      \endverb
+      \verb{urlraw}
+      \verb https://neovim.io/doc/general/
+      \endverb
+      \verb{url}
+      \verb https://neovim.io/doc/general/
+      \endverb
+    \endentry
+    \entry{OrgMode}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Org-mode. Complex so you don't have to be. A versatile organisational system with immense capabilities.}
+      \field{langid}{english}
+      \field{title}{Org {{Mode}}}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/CI5K4PVC/features.html
+      \endverb
+      \verb{urlraw}
+      \verb https://orgmode.org
+      \endverb
+      \verb{url}
+      \verb https://orgmode.org
+      \endverb
+    \endentry
     \entry{GCCCompilersAVR}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{{{GCC Compilers}} for {{AVR}}®{} and {{Arm}}®-{{Based MCUs}} and {{MPUs}} | {{Microchip Technology}}}
       \field{urlday}{22}
@@ -117,8 +204,8 @@
       \list{organization}{1}{%
         {Git}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{abstract}{Git Source Code Mirror - This is a publish-only repository but pull requests can be turned into patches to the mailing list via GitGitGadget (https://gitgitgadget.github.io/). Please follow Documentation/SubmittingPatches procedure for any of your improvements.}
       \field{day}{22}
@@ -164,8 +251,8 @@
       \strng{authorbibnamehash}{76a6653781ce6076ce802abcbc9c1fc5}
       \strng{authornamehash}{76a6653781ce6076ce802abcbc9c1fc5}
       \strng{authorfullhash}{76a6653781ce6076ce802abcbc9c1fc5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{VimTeX: A modern Vim and neovim filetype plugin for LaTeX files.}
@@ -210,8 +297,8 @@
       \strng{authorbibnamehash}{44ca33799bc2714094309178874ed121}
       \strng{authornamehash}{44ca33799bc2714094309178874ed121}
       \strng{authorfullhash}{44ca33799bc2714094309178874ed121}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{{ATmega328p}} Datasheet}
@@ -227,8 +314,8 @@
       \endverb
     \endentry
     \entry{DS18B20ProgrammableResolution}{article}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{{{DS18B20}} - {{Programmable Resolution}} 1-{{Wire Digital Thermometer}}}
@@ -255,6 +342,25 @@
       \endverb
       \verb{url}
       \verb https://pymongo.readthedocs.io/en/stable/index.html
+      \endverb
+    \endentry
+    \entry{SystemdArchWiki}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Systemd - {{ArchWiki}}}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/auan/Zotero/storage/KBLTCAUQ/Systemd.html
+      \endverb
+      \verb{urlraw}
+      \verb https://wiki.archlinux.org/title/Systemd
+      \endverb
+      \verb{url}
+      \verb https://wiki.archlinux.org/title/Systemd
       \endverb
     \endentry
   \enddatalist

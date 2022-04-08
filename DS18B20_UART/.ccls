@@ -3,12 +3,10 @@ clang
 avr
 -mmcu=atmega328p
 -DF_CPU=16000000UL
--DBAUD=57600
+-DBAUD=9600
 -nostdinc
 -ffreestanding
 -isystem/usr/avr/include
--I./include
--I../inc
--I./inc
+-I/home/auan/Project/DS18B20_UART/inc
 %h -x
 %h c-header

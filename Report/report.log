@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  22 MAR 2022 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.4)  24 MAR 2022 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1373,13 +1373,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--11
 
  []
 
-[3] (./Sections/introduction.tex (/home/auan/Project/Tex/gantt.tex) [4] [5]) [6] (./Sections/workingprinciple.tex
-</home/auan/Project/Report/Images/nano.png, id=200, 619.3539pt x 619.5948pt>
+[3] (./Sections/introduction.tex (/home/auan/Project/Tex/gantt.tex) [4]) [5] (./Sections/workingprinciple.tex
+</home/auan/Project/Report/Images/nano.png, id=204, 619.3539pt x 619.5948pt>
 File: /home/auan/Project/Report/Images/nano.png Graphic file (type png)
 <use /home/auan/Project/Report/Images/nano.png>
 Package pdftex.def Info: /home/auan/Project/Report/Images/nano.png  used on input line 11.
 (pdftex.def)             Requested size: 354.86412pt x 355.00684pt.
- [7 </home/auan/Project/Report/Images/nano.png (PNG copy)>] (/home/auan/Project/Report/Images/uartsig.tex
+ [6 </home/auan/Project/Report/Images/nano.png (PNG copy)>] (/home/auan/Project/Report/Images/uartsig.tex
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 7.
  (/usr/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1387,23 +1387,23 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))) [8] (./Sections/implementation.tex
-</home/auan/Project/Report/Images/part_overview.jpg, id=226, 362.7954pt x 302.8113pt>
+))) [7] (./Sections/implementation.tex
+</home/auan/Project/Report/Images/part_overview.jpg, id=231, 362.7954pt x 302.8113pt>
 File: /home/auan/Project/Report/Images/part_overview.jpg Graphic file (type jpg)
 <use /home/auan/Project/Report/Images/part_overview.jpg>
 Package pdftex.def Info: /home/auan/Project/Report/Images/part_overview.jpg  used on input line 12.
 (pdftex.def)             Requested size: 217.35588pt x 181.4248pt.
-</home/auan/Project/Report/Images/full_overview.jpg, id=227, 363.2772pt x 363.2772pt>
+</home/auan/Project/Report/Images/full_overview.jpg, id=232, 363.2772pt x 363.2772pt>
 File: /home/auan/Project/Report/Images/full_overview.jpg Graphic file (type jpg)
 <use /home/auan/Project/Report/Images/full_overview.jpg>
 Package pdftex.def Info: /home/auan/Project/Report/Images/full_overview.jpg  used on input line 19.
 (pdftex.def)             Requested size: 181.86879pt x 181.87097pt.
-</home/auan/Project/Report/Images/schematic.jpg, id=228, 410.4936pt x 281.1303pt>
+</home/auan/Project/Report/Images/schematic.jpg, id=233, 410.4936pt x 281.1303pt>
 File: /home/auan/Project/Report/Images/schematic.jpg Graphic file (type jpg)
 <use /home/auan/Project/Report/Images/schematic.jpg>
 Package pdftex.def Info: /home/auan/Project/Report/Images/schematic.jpg  used on input line 37.
 (pdftex.def)             Requested size: 266.14978pt x 182.2821pt.
- [9 </home/auan/Project/Report/Images/part_overview.jpg> </home/auan/Project/Report/Images/full_overview.jpg> </home/auan/Project/Report/Images/schematic.jpg>]
+ [8 </home/auan/Project/Report/Images/part_overview.jpg> </home/auan/Project/Report/Images/full_overview.jpg> </home/auan/Project/Report/Images/schematic.jpg>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 62.
  (/home/auan/Project/DS18B20_UART/.ccls) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1411,41 +1411,58 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstlang2.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) (/home/auan/Project/DS18B20_UART/Makefile [10]
+) (/home/auan/Project/DS18B20_UART/Makefile [9]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 33.
-) [11] (/home/auan/Project/DS18B20_UART/inc/onewire.h
+) [10] (/home/auan/Project/DS18B20_UART/inc/onewire.h
 consecutive:
-[12])
-</home/auan/Project/Report/Images/DS18B20_schem.png, id=332, 1201.48875pt x 479.7925pt>
+[11])
+</home/auan/Project/Report/Images/DS18B20_schem.png, id=340, 1201.48875pt x 479.7925pt>
 File: /home/auan/Project/Report/Images/DS18B20_schem.png Graphic file (type png)
 <use /home/auan/Project/Report/Images/DS18B20_schem.png>
 Package pdftex.def Info: /home/auan/Project/Report/Images/DS18B20_schem.png  used on input line 129.
 (pdftex.def)             Requested size: 354.86412pt x 141.70593pt.
- (/home/auan/Project/Report/Listings/systemd.tex [13 </home/auan/Project/Report/Images/DS18B20_schem.png>]) (/home/auan/Project/Report/Listings/dashmain.tex [14])) [15] (./Sections/resultdiscussion.tex) [16] (./Sections/conclandfurtherwork.tex) [17] (./Sections/appendices.tex) [18] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/home/auan/Project/Report/Listings/systemd.tex [12 </home/auan/Project/Report/Images/DS18B20_schem.png>]) (/home/auan/Project/Report/Listings/dashmain.tex [13])) [14] (./Sections/resultdiscussion.tex
+</home/auan/Project/Report/Images/dash2.png, id=425, 738.76pt x 586.19pt>
+File: /home/auan/Project/Report/Images/dash2.png Graphic file (type png)
+<use /home/auan/Project/Report/Images/dash2.png>
+Package pdftex.def Info: /home/auan/Project/Report/Images/dash2.png  used on input line 9.
+(pdftex.def)             Requested size: 354.86412pt x 281.57373pt.
+ [15 </home/auan/Project/Report/Images/dash2.png>]
+</home/auan/Project/Report/Images/dash1.png, id=433, 716.6775pt x 677.53125pt>
+File: /home/auan/Project/Report/Images/dash1.png Graphic file (type png)
+<use /home/auan/Project/Report/Images/dash1.png>
+Package pdftex.def Info: /home/auan/Project/Report/Images/dash1.png  used on input line 19.
+(pdftex.def)             Requested size: 310.50357pt x 293.54515pt.
+ (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) (/home/auan/Project/DS18B20_UART/src/main.c) (/home/auan/Project/DS18B20_UART/src/uart.c [19] [20]) (/home/auan/Project/DS18B20_UART/src/onewire.c [21] [22] [23] [24] [25] [26]) [27] (/home/auan/Project/DS18B20_UART/inc/uart.h) (/home/auan/Project/DS18B20_UART/inc/onewire.h [28] [29]) (/home/auan/Project/livedb.py [30] [31] [32] [33] [34]) (/home/auan/Project/serial_temp_to_db.py [35] [36] [37]) [38] [39] (./report.aux)
+)) [16 </home/auan/Project/Report/Images/dash1.png>] (./Sections/conclandfurtherwork.tex) [17] (./Sections/appendices.tex)
+Overfull \hbox (3.52255pt too wide) in paragraph at lines 49--49
+[]\T1/cmr/m/n/10 ^^P  Py-Mongo 4.0.2 Doc-u-men-ta-tion ^^V Py-Mongo 4.0.2 doc-u-men-ta-tion.^^Q (), [On-line]. Avail-able: []$\T1/cmtt/m/n/10 https :
+ []
+
+[18] (/home/auan/Project/DS18B20_UART/src/main.c) (/home/auan/Project/DS18B20_UART/src/uart.c [19] [20]) (/home/auan/Project/DS18B20_UART/src/onewire.c [21] [22] [23] [24] [25] [26]) [27] (/home/auan/Project/DS18B20_UART/inc/uart.h) (/home/auan/Project/DS18B20_UART/inc/onewire.h [28] [29]) (/home/auan/Project/livedb.py [30] [31] [32] [33] [34]) (/home/auan/Project/serial_temp_to_db.py [35] [36] [37]) [38] [39] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 1279EA0A531AB0888B8771A18E0E0012;4365.
+(rerunfilecheck)             Checksum: 33ACB02517E2B038D438A5F899464B9E;4509.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55223 strings out of 478353
- 1206135 string characters out of 5854636
- 2471550 words of memory out of 5000000
- 71199 multiletter control sequences out of 15000+600000
+ 55324 strings out of 478353
+ 1208153 string characters out of 5854636
+ 2475182 words of memory out of 5000000
+ 71280 multiletter control sequences out of 15000+600000
  418033 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,11n,120p,1319b,2179s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (39 pages, 2073495 bytes).
+Output written on report.pdf (39 pages, 2139921 bytes).
 PDF statistics:
- 1864 PDF objects out of 2073 (max. 8388607)
- 1757 compressed objects within 18 object streams
- 1206 named destinations out of 1440 (max. 500000)
- 278 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1910 PDF objects out of 2073 (max. 8388607)
+ 1798 compressed objects within 18 object streams
+ 1224 named destinations out of 1440 (max. 500000)
+ 296 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,14 +1,16 @@
 \section{Conclusions and futher work}%
 \label{sec:conclusions_and_futher_work}
 
-The system provides a user-friendly front end where the data can be visualized, accessed and monitored through custom settings. 
+The system provides a user-friendly front end where the collected temperature data of the beer can be visualized, accessed and monitored through custom settings. If the temperature drops and triggers the alarm, an email is sent containing information about the difference of the two latest temperature readings. The choice of the main two programming languages, Python and C, proved to be sufficient with a few additions of basic Linux scripting. The dependencies for the C programs was easy to track. Python, on the other hand, relies on many module dependencies which makes it hard to track. This is a trade-off when wrapping many functionalities consistently within one programming or scripting language.
 
 \subsection{Improvements}%
 \label{sub:improvements}
+While there exist a multitude of possible extensions to the system, many of the existing features can be improved or optimized.
 
 \begin{enumerate}
- \item Pre-processing the data through a filter on the MCU is more efficient compared to post-processing larger parts on the dataset while also running the web application. The post-processing was made using the \verb|savgol| filter from the Numpy and could have been improved by tuning an optimal resampling size. 
+ \item Pre-processing the data through a filter on the MCU is more efficient compared to post-processing larger parts on the dataset while also running the web application. The post-processing was made using the \verb|savgol| filter from the Numpy Python library and could have been improved by tuning an optimal resampling size. 
  \item If the data is filtered by the RPi, the trace is toggled by the user and only computed when chosen. When filtering a large time-series, the user should be able to set the use choose a dynamic window size.
  \item Since the MCU only polls for an input every hour it could be possible to implement a rule to let the Linux kernel power the USB connecting to the MCU shortly before asking for a measurement.
  \item The server can be deployed to be accessed through the internet and lets the user remotely monitor the temperature in real time. This was not investigated due to security issues.
+ \item Presenting the statistics of the data in a separate area.
 \end{enumerate}

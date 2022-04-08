@@ -2348,16 +2348,23 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">/home/auan/testbib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">PinoutNANO</bcf:citekey>
-    <bcf:citekey order="2">PinoutNANO</bcf:citekey>
-    <bcf:citekey order="3">trevennorPracticalAVRMicrocontrollers2012</bcf:citekey>
-    <bcf:citekey order="4">RaspberryPiArch</bcf:citekey>
-    <bcf:citekey order="5">GCCCompilersAVR</bcf:citekey>
-    <bcf:citekey order="6">git</bcf:citekey>
-    <bcf:citekey order="7">lervagVimTeX2022</bcf:citekey>
-    <bcf:citekey order="8">atmega328p</bcf:citekey>
-    <bcf:citekey order="9">DS18B20ProgrammableResolution</bcf:citekey>
-    <bcf:citekey order="10">PyMongo</bcf:citekey>
+    <bcf:citekey order="1">MixedFermentation</bcf:citekey>
+    <bcf:citekey order="2">MicroPython</bcf:citekey>
+    <bcf:citekey order="3">PinoutNANO</bcf:citekey>
+    <bcf:citekey order="4">PinoutNANO</bcf:citekey>
+    <bcf:citekey order="5">trevennorPracticalAVRMicrocontrollers2012</bcf:citekey>
+    <bcf:citekey order="6">RaspberryPiArch</bcf:citekey>
+    <bcf:citekey order="7">DocumentationNeovim</bcf:citekey>
+    <bcf:citekey order="8">OrgMode</bcf:citekey>
+    <bcf:citekey order="9">GCCCompilersAVR</bcf:citekey>
+    <bcf:citekey order="10">git</bcf:citekey>
+    <bcf:citekey order="11">lervagVimTeX2022</bcf:citekey>
+    <bcf:citekey order="12">atmega328p</bcf:citekey>
+    <bcf:citekey order="13">DS18B20ProgrammableResolution</bcf:citekey>
+    <bcf:citekey order="14">DS18B20ProgrammableResolution</bcf:citekey>
+    <bcf:citekey order="15">DS18B20ProgrammableResolution</bcf:citekey>
+    <bcf:citekey order="16">PyMongo</bcf:citekey>
+    <bcf:citekey order="17">SystemdArchWiki</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
