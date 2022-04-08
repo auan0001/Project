@@ -146,8 +146,11 @@ CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-14 Mon>
 :END:
  :TAGS: :@project:
 
-** TODO Final Report
-DEADLINE: <2022-03-23 Wed>
+** DONE Final Report
+CLOSED: [2022-03-29 Tue 21:11] DEADLINE: <2022-03-23 Wed>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-29 Tue 21:11]
+:END:
  :TAGS: :@project:
 
 ** DONE Reschedule verbal exam
@@ -194,9 +197,45 @@ CLOSED: [2022-03-21 Mon 13:18] DEADLINE: <2022-03-18 Fri 16:30>
 :END:
  :TAGS: :@project:
 
-** TODO API in report
-DEADLINE: <2022-03-23 Wed>
+** DONE API in report
+CLOSED: [2022-03-24 Thu 14:47] DEADLINE: <2022-03-23 Wed>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-24 Thu 14:47]
+:END:
  :TAGS: :@project:
+
+** TODO Fish Game assignment
+DEADLINE: <2022-04-08 Fri>
+ :TAGS: :@project:
+
+** TODO Finish report
+***  2 Working principle  
+ - [ ] This chapter should present the working principle of the fermentation temperature logging system, instead of how a MCU and a SBC work.  
+ - [ ] Move 2.1 - 2.4 to 3.2 Hardware and components as 3.2.1 - 3.2.4, respectively.
+ - [ ] Move 2.5 to 3.3 Software and development tools as 3.3.7 HTML - HyperText Markup Language
+
+
+*** 3 Implementation 8
+**** 3.1 Overview of the system
+- [ ] Move Figure 3.1 to 4.1 Prototype. Use a drawing in your ppt showing a schematic of the logging system, and then add text to explain what the system is made of
+**** 3.2 Hardware and components
+***** 3.2.2 DS18B20 temperature sensor
+      - [ ] Provide a picture of the sensor as well as a short description and the specs
+      3.2.3 Raspberry Pi 3B
+      - [ ] Provide a picture of the Raspberry as well as a short description and the specs
+      3.2.4 Arduino Nano
+      - [ ] Provide a picture of the Arduino Nano as well as a short description and the specs
+
+**** 3.3 Software and development tools
+      ... 
+      3.3.7 HTML - HyperText Markup Language
+      - [ ] = 2.5 Web application 
+
+*** 4 Result and discussion
+  4.1 Prototype
+  - [ ] Move Figure 3.1 to this section, and add text to explain it
+  4.2 Web user interface 
+  - [ ] The text in the current chapter
 
 * Meetings
 
@@ -226,4 +265,16 @@ CLOSED: [2022-03-21 Mon 13:18] SCHEDULED: <2022-03-16 Wed 10:00-12:00>
 :LOGBOOK:
 - State "DONE"       from "MEETING"    [2022-03-21 Mon 13:18]
 :END:
+
+** MEETING Maya Thesis
+SCHEDULED: <2022-04-07 Thu 10:00>
+ :PROPERTIES:
+ :LOCATION: 106195
+ :END:
+
+** MEETING Maya meeting
+SCHEDULED: <2022-04-13 Wed 10:00>
+ :PROPERTIES:
+ :LOCATION: 106195
+ :END:
 
